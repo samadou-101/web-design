@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Miracle";
+  src: url("/public/fonts//Miracle.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Helvetica";
+  src: url("/public/fonts//Helvetica.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --white-color: #fffcf6;
+  --secondary-color: #fcd043;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+
+body {
+  background-color: #313f38;
+  padding: 2.5rem 1.875rem;
+}
