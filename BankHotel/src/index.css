@@ -13,6 +13,7 @@
 :root {
   --white-color: #fffcf6;
   --secondary-color: #fcd043;
+  --background-color: #313f38;
 }
 * {
   box-sizing: border-box;
@@ -22,11 +23,12 @@
   font-weight: normal;
   font-style: normal;
 }
-li {
-  list-style: none;
+body {
+  background-color: var(--background-color);
+  padding: 2.5rem 1.875rem;
+  font-family: "Helvetica";
 }
 
-body {
-  background-color: #313f38;
-  padding: 2.5rem 1.875rem;
+li {
+  list-style: none;
 }

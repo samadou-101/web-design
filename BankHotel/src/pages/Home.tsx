@@ -4,10 +4,10 @@ import Hero from "../components/home/hero/Hero";
 
 function Home() {
   return (
-    <div>
+    <>
       <Header />
       <Hero />
-    </div>
+    </>
   );
 }
 
