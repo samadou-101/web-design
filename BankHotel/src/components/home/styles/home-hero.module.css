@@ -7,37 +7,6 @@
   --font-26: 1.625rem;
   --font-220: 13.75rem;
 }
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: normal;
-  width: 100%;
-}
-.logo {
-  font-size: 18px;
-  font-size: var(--font-20);
-  color: white;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 4.375rem;
-  color: var(--white);
-}
-.nav li {
-  font-size: var(--font-14);
-  /* font-size: 14px; */
-  opacity: 0.9;
-}
-.phone-number {
-  color: var(--white);
-  font-size: 1rem;
-}
-
-/* END HEADER  */
-
 /* HERO SECTIOTN  */
 
 .hero-container {

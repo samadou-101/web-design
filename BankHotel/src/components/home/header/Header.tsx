@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../styles/home.module.css";
+import style from "../styles/home-header.module.css";
 const Header: React.FC = () => {
   return (
     <div className={style["header-container"]}>

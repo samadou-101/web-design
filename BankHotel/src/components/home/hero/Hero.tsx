@@ -1,4 +1,4 @@
-import style from "../styles/home.module.css";
+import style from "../styles/home-hero.module.css";
 import star from "../../../assets/Star.svg";
 import btn from "../../../assets/button-default.svg";
 import vital from "../../../assets/vital.svg";
