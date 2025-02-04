@@ -15,6 +15,7 @@
   --secondary-color: #fcd043;
   --background-color: #313f38;
   --border-color: #dadada;
+  --text-color: #1b3b36;
 }
 * {
   box-sizing: border-box;
@@ -24,9 +25,15 @@
   font-weight: normal;
   font-style: normal;
 }
+html {
+  scroll-snap-type: y proximity;
+  /* scroll-snap-type: none; */
+  scroll-behavior: smooth;
+}
 body {
   background-color: var(--background-color);
   padding: 2.5rem 1.875rem;
+  scroll-behavior: smooth;
   font-family: "Helvetica";
 }
 

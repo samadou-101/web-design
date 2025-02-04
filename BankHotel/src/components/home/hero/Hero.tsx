@@ -2,6 +2,7 @@ import style from "../styles/home-hero.module.css";
 import star from "../../../assets/Star.svg";
 import btn from "../../../assets/button-default.svg";
 import vital from "../../../assets/vital.svg";
+import Since from "../shared/Since";
 const Hero = () => {
   return (
     <div className={style["hero-container"]}>
@@ -17,6 +18,7 @@ const Hero = () => {
           </p>
         </div>
         <div className={style["info"]}>
+          {/* <Since /> */}
           <div className={style["since"]}>
             <img src={star} alt="star" />
             <span>Since 1973</span>

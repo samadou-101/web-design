@@ -1,5 +1,4 @@
 import style from "../styles/home-about.module.css";
-import roomsBtn from "../../../assets/rooms-btn.svg";
 const About = () => {
   return (
     <div className={style["about-container"]}>
