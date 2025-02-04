@@ -17,7 +17,8 @@
   padding: 0 1.875rem;
 }
 
-/* ROOMS & APARTMENTS CONTAINER */
+/*  ---------------------- ROOMS & APARTMENTS CONTAINER  ------------------------------------------*/
+
 .rooms-apartments-container {
   padding: 17.57rem 0 12.5rem 0;
   /* width: 100%; */
@@ -176,4 +177,113 @@
 .middle-section,
 .right-section {
   height: 100vh; /* Make each section take up the full viewport height */
+}
+
+/*  ----------------------  FACILITIES  ------------------------------------------*/
+.facilities-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 165.75rem;
+  /* height: 100vh; */
+  /* scroll-snap-align: start; */
+}
+
+.fac-header {
+  display: flex;
+  justify-content: space-between;
+  scroll-snap-align: start;
+  height: 100vh;
+}
+.fac-header .fac-left-section,
+.fac-header .fac-middle-section,
+.fac-header .fac-right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0;
+  height: 100vh;
+}
+
+.fac-header .fac-left-section h3 {
+  width: 15.6875rem;
+  height: 3.875rem;
+  font-size: var(--font-26);
+  color: var(--text-color);
+}
+
+.fac-header .fac-left-section .text .img {
+  width: 27.6875rem;
+  height: 17.875rem;
+  overflow: hidden;
+}
+
+.fac-header .fac-left-section .text .img img {
+  width: auto;
+  height: auto;
+}
+
+/* Middle section */
+
+.fac-header .fac-middle-section .header {
+  width: 31rem;
+  height: 24.375rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.fac-header .fac-middle-section .header h1 {
+  font-size: 105px;
+  color: var(--text-color);
+}
+
+.fac-header .fac-middle-section .header h1:first-child {
+  width: 50%;
+}
+
+.fac-header .fac-middle-section .header h1:last-child {
+  width: 80%;
+  /* padding-left: 3rem; */
+  align-self: flex-end;
+}
+
+.fac-header .fac-middle-section .content {
+  width: 21.875rem;
+  height: 8.75rem;
+  font-size: var(--font-18);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* Right Section */
+
+.fac-header .fac-right-section {
+  padding-top: 10rem;
+  position: relative;
+}
+.fac-header .fac-right-section .fac-r-img {
+  width: 27.6875rem;
+  height: 17.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+  overflow: hidden;
+  position: relative;
+}
+.fac-header .fac-right-section .fac-r-img img {
+  width: auto;
+  height: auto;
+}
+.fac-header .fac-right-section .hotel-premium {
+  position: absolute;
+  content: "";
+  width: 11.875rem;
+  height: 11.875rem;
+  top: 4rem;
+  transform: translateX(-50%);
+  background-image: url("../../../assets/hotel-premium.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 999;
 }

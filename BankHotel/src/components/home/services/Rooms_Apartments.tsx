@@ -3,7 +3,7 @@ import star from "../../../assets/Star.svg";
 import littleRoom from "../../../assets/little-room1.png";
 import bigRoom from "../../../assets/big-room1.png";
 import nextRoomBtn from "../../../assets/next-room-btn.svg";
-import Since from "../shared/Since";
+// import Since from "../shared/Since";
 const Rooms_Apartments = () => {
   return (
     <div className={style["rooms-apartments-container"]}>
