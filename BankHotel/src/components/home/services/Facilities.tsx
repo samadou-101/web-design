@@ -2,6 +2,8 @@ import style from "../styles/home-services.module.css";
 import manKitchen from "../../../assets/man-kitchen.png";
 import starPNG from "../../../assets/star.png";
 import chef from "../../../assets/chef.png";
+import goDown from "../../../assets/go-down.png";
+import spaceCopenhagen from "../../../assets/space-copenhagen.png";
 const Facilities = () => {
   return (
     <div className={style["facilities-container"]}>
@@ -37,18 +39,24 @@ const Facilities = () => {
 
       {/*    working       */}
       <div className={style["fac-content"]}>
-        <div className="fac-left-section">
-          <img src="" alt="" />
+        <div className={style["fac-left-section"]}>
+          <img src={goDown} alt="" />
         </div>
-        <div className={style['"fac-middle-section"']}>
+        <div className={style["fac-middle-section"]}>
           <h2>01</h2>
-          <div className={style["text"]}>
-            <h2></h2>
-            <p></p>
+          <div className={style["fac-text"]}>
+            <h2>Ice Restaurant</h2>
+            <p>
+              The hotel's exclusive infrastructure is complemented by the unique
+              atmosphere of the Safe Restaurant. Author's menu, extensive orange
+              card, and live event will set you for the correct mood.
+            </p>
           </div>
         </div>
-        <div className={style['"fac-right-section"']}>
-          <div className={style["img"]}></div>
+        <div className={style["fac-right-section"]}>
+          <div className={style["img"]}>
+            <img src={spaceCopenhagen} alt="" />
+          </div>
         </div>
       </div>
 
