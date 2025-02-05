@@ -16,6 +16,7 @@
   margin-left: -1.875rem;
   margin-right: -1.875rem;
   padding: 0 1.875rem;
+  padding-bottom: 18.75rem;
 }
 
 /*  ---------------------- ROOMS & APARTMENTS CONTAINER  ------------------------------------------*/
@@ -367,7 +368,6 @@
 .fac-more {
   display: flex;
   flex-direction: column;
-  gap: ;
   padding-top: 12.5rem;
 }
 .fac-more .two,
