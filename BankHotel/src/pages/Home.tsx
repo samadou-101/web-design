@@ -5,6 +5,7 @@ import Services from "../components/home/services/Services";
 import Best_Apartment from "../components/home/apartment/Best_Apartment";
 import Gallery from "../components/home/gallery/Gallery";
 import Get_In_Touch from "../components/home/contact/Get_In_Touch";
+import Footer from "../components/home/footer/Footer";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
       <Best_Apartment />
       <Gallery />
       <Get_In_Touch />
+      <Footer />
     </>
   );
 }
