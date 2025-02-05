@@ -1,0 +1,162 @@
+:root {
+  --white: #fffcf6;
+  --font-14: 0.875rem;
+  --font-18: 1.125rem;
+  --font-20: 1.25rem;
+  --font-22: 1.375rem;
+  --font-26: 1.625rem;
+  --font-80: 5rem;
+  --font-150: 9.375rem;
+  --font-220: 13.75rem;
+  --font-300: 18.75rem;
+}
+.contact-container {
+  position: relative;
+  height: 142.3125rem;
+  height: 114.25rem;
+  background-color: var(--white-color);
+  margin-left: -1.875rem;
+  margin-right: -1.875rem;
+  padding: 0 1.875rem;
+  padding-top: 18.75rem;
+  overflow: hidden;
+  padding-bottom: 12.5rem;
+}
+.contact-container::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: var(--background-color);
+  opacity: 0.24;
+  bottom: 0;
+}
+.phone-num h2 {
+  font-size: var(--font-80);
+  color: var(--text-color);
+  width: 41.9375rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.g-i-t {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 5.1875rem;
+  /* overflow: hidden; */
+}
+.g-i-t .background {
+  position: absolute;
+  top: 8rem;
+  right: 9.5rem;
+  width: 27.6875rem;
+  height: 27.6875rem;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.g-i-t .background img {
+  width: auto;
+  height: auto;
+}
+.g-i-t .wave {
+  position: absolute;
+  width: 100vw;
+  top: -14%;
+  left: -1.5rem;
+  z-index: 999;
+}
+.g-i-t .wave img {
+  width: auto;
+  height: auto;
+}
+.g-i-t h4 {
+  font-size: var(--font-26);
+  width: 17.75rem;
+  color: var(--text-color);
+  margin-left: 78rem;
+}
+.g-i-t .title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+}
+.g-i-t .title img {
+  width: 9.375rem;
+  height: 9.375rem;
+}
+.g-i-t .title span {
+  font-size: var(--font-300);
+  font-family: "Miracle";
+}
+.g-i-t .title span:first-of-type {
+  color: var(--text-color);
+}
+.g-i-t .title span:last-of-type {
+  color: var(--secondary-color);
+  margin-left: auto;
+}
+
+/* Find A Room  */
+.find-room {
+  display: flex;
+  flex-direction: column;
+  gap: 3.125rem;
+}
+
+.find-room span {
+  font-size: var(--font-26);
+  color: var(--text-color);
+  width: 17.75rem;
+}
+.find-room .action {
+  width: 57.1875rem;
+  height: 8.75rem;
+  border: 1px solid var(--background-color);
+  display: flex;
+  align-items: center;
+}
+
+.find-room .action .check-in {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2.5rem;
+  gap: 6.565625rem;
+}
+.find-room .action .check-in::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 3.75rem;
+  background-color: var(--background-color);
+  opacity: 0.24;
+  right: 0;
+}
+.find-room .action .check-in span,
+.find-room .action .check-out span {
+  font-size: var(--font-18);
+  width: 7.0625rem;
+}
+.find-room .action .check-in img,
+.find-room .action .check-out img {
+  cursor: pointer;
+}
+.find-room .action .check-out {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2.5rem;
+  gap: 6.565625rem;
+}
+.find-room .action .book-room {
+  flex-grow: 1;
+  background-color: var(--background-color);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-18);
+  color: var(--white-color);
+}
