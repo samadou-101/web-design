@@ -419,3 +419,7 @@
   /* margin-right: 9.75rem; */
   width: 45.5rem;
 }
+
+.fac-more .three h2:last-of-type {
+  width: 45.5rem;
+}

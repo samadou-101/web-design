@@ -6,7 +6,7 @@ import goDown from "../../../assets/go-down.png";
 import spaceCopenhagen from "../../../assets/space-copenhagen.png";
 import conferenceHall from "../../../assets/conference-hall.png";
 import nextRoom from "../../../assets/next-room-btn.svg";
-import orangeBar from "../../../assets/orange-bar.jpg";
+import cafeteria from "../../../assets/cafeteria.jpg";
 const Facilities = () => {
   return (
     <div className={style["facilities-container"]}>
@@ -74,10 +74,10 @@ const Facilities = () => {
         </div>
         <div className={style["three"]}>
           <div className={style["img"]}>
-            <img src={orangeBar} alt="" />
+            <img src={cafeteria} alt="" />
           </div>
           <h2>03</h2>
-          <h2>Orange Bar "Reserve"</h2>
+          <h2>Cafeteria "Reserve"</h2>
           <img src={nextRoom} alt="" />
         </div>
       </div>
