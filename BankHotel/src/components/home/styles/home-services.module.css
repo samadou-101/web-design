@@ -361,3 +361,61 @@
   height: auto;
   object-fit: cover;
 }
+
+/* --------- facilities more -----------  */
+
+.fac-more {
+  display: flex;
+  flex-direction: column;
+  gap: ;
+  padding-top: 12.5rem;
+}
+.fac-more .two,
+.fac-more .three {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 9.375rem;
+  padding-bottom: 3.125rem;
+  border-bottom: 1px solid rgba(49, 63, 56, 0.24);
+
+  align-items: center;
+  width: 100%;
+}
+.fac-more .three {
+  padding-top: 3.125rem;
+}
+.fac-more .two .img,
+.fac-more .three .img {
+  width: 17.75rem;
+  height: 17.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.fac-more .two .img img,
+.fac-more .three .img img {
+  width: auto;
+  height: auto;
+}
+
+.fac-more .three .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.fac-more .two h2,
+.fac-more .three h2 {
+  font-size: var(--font-80);
+  color: var(--text-color);
+  font-family: "Miracle";
+}
+
+.fac-more .two h2:first-of-type,
+.fac-more .three h2:first-of-type {
+  margin-left: 2.375rem;
+}
+.fac-more .two h2:last-of-type {
+  /* margin-right: 9.75rem; */
+  width: 45.5rem;
+}

@@ -4,6 +4,9 @@ import starPNG from "../../../assets/star.png";
 import chef from "../../../assets/chef.png";
 import goDown from "../../../assets/go-down.png";
 import spaceCopenhagen from "../../../assets/space-copenhagen.png";
+import conferenceHall from "../../../assets/conference-hall.png";
+import nextRoom from "../../../assets/next-room-btn.svg";
+import orangeBar from "../../../assets/orange-bar.jpg";
 const Facilities = () => {
   return (
     <div className={style["facilities-container"]}>
@@ -37,7 +40,6 @@ const Facilities = () => {
         </div>
       </div>
 
-      {/*    working       */}
       <div className={style["fac-content"]}>
         <div className={style["fac-left-section"]}>
           <img src={goDown} alt="" />
@@ -60,22 +62,23 @@ const Facilities = () => {
         </div>
       </div>
 
+      {/*    progress       */}
       <div className={style["fac-more"]}>
         <div className={style["two"]}>
           <div className={style["img"]}>
-            <img src="" alt="" />
+            <img src={conferenceHall} alt="" />
           </div>
-          <h2></h2>
-          <h2></h2>
-          <img src="" alt="" />
+          <h2>02</h2>
+          <h2>Conference Hall</h2>
+          <img src={nextRoom} alt="" />
         </div>
         <div className={style["three"]}>
           <div className={style["img"]}>
-            <img src="" alt="" />
+            <img src={orangeBar} alt="" />
           </div>
-          <h2></h2>
-          <h2></h2>
-          <img src="" alt="" />
+          <h2>03</h2>
+          <h2>Orange Bar "Reserve"</h2>
+          <img src={nextRoom} alt="" />
         </div>
       </div>
     </div>
