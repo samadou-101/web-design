@@ -1,4 +1,5 @@
 import style from "../styles/home-about.module.css";
+import { motion } from "framer-motion";
 const About = () => {
   return (
     <div className={style["about-container"]}>
@@ -6,7 +7,13 @@ const About = () => {
         <div className={style["rectangle-radius"]}></div>
       </div>
       <div className={style["about-content"]}>
-        <section className={style["left-img"]}></section>
+        <motion.section
+          className={style["left-img"]}
+          initial={{ opacity: 0, x: -200 }}
+          transition={{ duration: 1, ease: "linear" }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+        ></motion.section>
         <div className={style["about-text"]}>
           <div className={style["about-logo"]}>
             <p>
@@ -25,7 +32,16 @@ const About = () => {
           </div>
         </div>
         <div className={style["right-section"]}>
-          <div className={style["right-img"]}></div>
+          <motion.div
+            className={style["right-img"]}
+            initial={{ opacity: 0, x: 200 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 1, ease: "linear" },
+            }}
+            viewport={{ once: true, amount: 0.4 }}
+          ></motion.div>
           <div className={style["rooms-btn"]}>
             {/* <img src={roomsBtn} alt="" /> */}
           </div>

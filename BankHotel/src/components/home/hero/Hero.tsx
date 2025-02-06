@@ -2,7 +2,7 @@ import style from "../styles/home-hero.module.css";
 import star from "../../../assets/Star.svg";
 import btn from "../../../assets/button-default.svg";
 import vital from "../../../assets/vital.svg";
-// import Since from "../shared/Since";
+import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <div className={style["hero-container"]}>
@@ -10,8 +10,23 @@ const Hero = () => {
       <div className={style["hero-intro"]}>
         <div className={style["text"]}>
           <h1>
-            <span className={style["s1"]}>Bank</span>
-            <span className={style["s2"]}>Hotel</span>
+            <motion.span
+              className={style["s1"]}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0.5, 1] }}
+              transition={{ duration: 0.7, ease: "easeIn" }}
+            >
+              Bank
+            </motion.span>
+
+            <motion.span
+              className={style["s2"]}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0.5, 1] }}
+              transition={{ duration: 0.7, ease: "easeIn" }}
+            >
+              Hotel
+            </motion.span>
           </h1>
           <p className={style["hero-p"]}>
             ROOMS // RESTAURANT // CONGRESS HALL // ORANGE DRINKS
