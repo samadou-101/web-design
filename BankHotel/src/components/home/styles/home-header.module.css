@@ -11,11 +11,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-weight: normal;
   width: 100%;
 }
 .logo {
-  font-size: 18px;
+  font-size: var(--font-18);
   font-size: var(--font-20);
   color: white;
 }
@@ -28,7 +27,6 @@
 }
 .nav li {
   font-size: var(--font-14);
-  /* font-size: 14px; */
   opacity: 0.9;
 }
 .phone-number {
@@ -38,21 +36,29 @@
 
 /* END HEADER  */
 
-@media (max-width: 1700px) {
+/*  --------------- RESPONSIVE DESIGN -----------------  */
+@media (min-width: 1441px) {
   .nav {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    /* gap: 3rem; */
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1440px) {
   .nav {
     display: flex;
     align-items: center;
-    gap: 2rem;
   }
-  .nav li {
-    font-size: 0.8rem;
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1024px) {
+  html {
+    font-size: 13px;
+  }
+  .nav {
+    gap: 2.5rem;
   }
 }

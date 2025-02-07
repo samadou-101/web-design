@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 
 function App() {
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowDown" || e.key === "ArrowUp" || e.key === " ") {
         document.documentElement.style.scrollSnapType = "none";
       } else document.documentElement.style.scrollSnapType = "y proximity"; // Restore it

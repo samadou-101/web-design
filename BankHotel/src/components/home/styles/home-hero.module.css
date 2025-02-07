@@ -5,6 +5,9 @@
   --font-20: 1.25rem;
   --font-22: 1.375rem;
   --font-26: 1.625rem;
+  --font-120: 7.5rem;
+  --font-150: 9.375rem;
+  --font-170: 10.625rem;
   --font-220: 13.75rem;
 }
 /* HERO SECTIOTN  */
@@ -96,7 +99,6 @@
 .btn img {
   width: 100%;
 }
-
 /* HERO ACTION */
 .hero-action {
   display: flex;
@@ -189,4 +191,69 @@
   color: var(--white-color);
   width: 15.6875rem;
   text-align: right;
+}
+
+/* ------------- RESPNSIVE DESIGN ------------- */
+@media (min-width: 1201px) and (max-width: 1500px) {
+  .hero-intro .text h1 > * {
+    font-size: var(--font-170);
+  }
+  .hero-intro .text .hero-p {
+    font-size: var(--font-18);
+  }
+  .hero-intro .since {
+    gap: 1.4375rem;
+  }
+  .hero-intro .info p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .hero-intro {
+    height: fit-content;
+    padding-bottom: 2.5rem;
+  }
+  .hero-intro .text h1 > * {
+    font-size: var(--font-120);
+  }
+  .hero-intro .text .hero-p {
+    font-size: var(--font-14);
+  }
+  .hero-intro .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 3;
+    padding: 0;
+    padding-top: 1rem;
+
+    height: fit-content;
+  }
+  .hero-intro .info .since {
+    display: none;
+  }
+  .hero-intro .info p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .hero-intro .btn {
+    order: 2;
+    height: fit-content;
+    padding: 0;
+    padding-top: 1rem;
+  }
+  .hero-action {
+    margin-top: auto;
+  }
+  .more-info {
+    margin-top: 0;
+  }
+  .more-info .phone-stuff > * {
+    font-size: var(--font-18);
+  }
+  .more-info .art-hall {
+    font-size: 1rem;
+    width: 10.9375rem;
+  }
 }
