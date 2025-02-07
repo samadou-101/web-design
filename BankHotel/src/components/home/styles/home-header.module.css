@@ -37,3 +37,22 @@
 }
 
 /* END HEADER  */
+
+@media (max-width: 1700px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav li {
+    font-size: 0.8rem;
+  }
+}
