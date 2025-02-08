@@ -12,7 +12,7 @@ const About = () => {
           initial={{ opacity: 0, x: -200 }}
           transition={{ duration: 1, ease: "linear" }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.0 }}
         ></motion.section>
         <div className={style["about-text"]}>
           <div className={style["about-logo"]}>
@@ -40,7 +40,7 @@ const About = () => {
               x: 0,
               transition: { duration: 1, ease: "linear" },
             }}
-            viewport={{ once: true, amount: 0.4 }}
+            viewport={{ once: true }}
           ></motion.div>
           <div className={style["rooms-btn"]}>
             {/* <img src={roomsBtn} alt="" /> */}

@@ -193,7 +193,7 @@
   text-align: right;
 }
 
-/* ------------- RESPNSIVE DESIGN ------------- */
+/* ------------- RESPONSIVENESS ------------- */
 @media (min-width: 1201px) and (max-width: 1500px) {
   .hero-intro .text h1 > * {
     font-size: var(--font-170);
@@ -210,6 +210,12 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
+  .hero-container {
+    height: fit-content;
+  }
+  .background-container {
+    background-size: contain;
+  }
   .hero-intro {
     height: fit-content;
     padding-bottom: 2.5rem;
@@ -245,6 +251,8 @@
   }
   .hero-action {
     margin-top: auto;
+    margin-top: 34.375rem;
+    margin-top: 24.1875rem;
   }
   .more-info {
     margin-top: 0;
