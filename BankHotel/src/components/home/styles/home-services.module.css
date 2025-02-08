@@ -1,12 +1,14 @@
 :root {
   --white: #fffcf6;
+  --font-13: 0.8125rem;
   --font-14: 0.875rem;
   --font-18: 1.125rem;
   --font-20: 1.25rem;
   --font-22: 1.375rem;
   --font-26: 1.625rem;
-  --font-80: 5rem;
+  --font-120: 7.5rem;
   --font-150: 9.375rem;
+  --font-170: 10.625rem;
   --font-220: 13.75rem;
 }
 
@@ -91,6 +93,7 @@
   /* border: 1px solid gray; */
   /* height: 62.5rem; */
   height: 100%;
+  height: 100vh;
   /* height: 57rem; */
   padding-top: 4rem;
   padding-bottom: 1rem;
@@ -169,7 +172,6 @@
   align-items: center;
   justify-content: center;
   margin-top: auto;
-  margin-top: auto;
 }
 .big-room img {
   width: auto;
@@ -178,7 +180,7 @@
 .left-section,
 .middle-section,
 .right-section {
-  height: 100vh; /* Make each section take up the full viewport height */
+  height: 100vh;
 }
 
 /*  ----------------------  FACILITIES  ------------------------------------------*/
@@ -422,4 +424,133 @@
 
 .fac-more .three h2:last-of-type {
   width: 45.5rem;
+}
+
+/* -------------- RESPONSIVENESS --------------- */
+
+@media (max-width: 1800px) {
+  .header h1 {
+    font-size: var(--font-120);
+  }
+  .header p {
+    font-size: var(--font-22);
+  }
+  .middle-section .text p {
+    font-size: 1rem;
+  }
+  .left-section .little-room {
+    width: 16rem;
+    height: 20rem;
+  }
+  .right-section {
+    width: 45rem;
+  }
+}
+
+@media (max-width: 1560px) {
+  .header h1 {
+    font-size: var(--font-80);
+  }
+  .header p {
+    font-size: var(--font-22);
+  }
+  .middle-section .text p {
+    font-size: 1rem;
+  }
+  .left-section .little-room {
+    width: fit-content;
+    width: 90%;
+    height: 43%;
+  }
+  .right-section {
+    width: 45rem;
+  }
+  .right-section .big-room {
+    width: 44rem;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 1440px) {
+  .header h1 {
+    font-size: var(--font-80);
+  }
+  .header p {
+    font-size: var(--font-22);
+  }
+  .middle-section .text p {
+    font-size: 1rem;
+  }
+  .left-section {
+    width: 17.5rem;
+  }
+  .left-section .little-room {
+    width: 100%;
+    height: 23rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7rem;
+  }
+  .right-section {
+    width: 45rem;
+  }
+  .right-section .big-room {
+    width: 44rem;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 1375px) {
+  .rooms {
+    height: 100vh;
+  }
+  .header h1 {
+    font-size: 6.25rem;
+  }
+  .header p {
+    font-size: var(--font-22);
+  }
+  .middle-section .text p {
+    font-size: 1rem;
+  }
+  .left-section {
+    width: 17.5rem;
+    justify-content: center;
+  }
+  .left-section .little-room {
+    display: none;
+  }
+  .left-section .next-room-btn img {
+    width: 7.5rem;
+  }
+  .middle-section {
+    justify-content: center;
+    gap: 7.14rem;
+    padding: 0;
+  }
+  .middle-section .since {
+    display: none;
+  }
+  .middle-section .text {
+    padding: 0;
+  }
+  .middle-section .current-room {
+    margin: 0;
+  }
+  .right-section {
+    width: 51rem;
+    width: 40rem;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .right-section .big-room {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin: 0;
+    width: 51rem;
+    height: 34rem;
+  }
 }
