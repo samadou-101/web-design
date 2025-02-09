@@ -6,8 +6,8 @@ function App() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowDown" || e.key === "ArrowUp" || e.key === " ") {
-        document.documentElement.style.scrollSnapType = "none";
-      } else document.documentElement.style.scrollSnapType = "y proximity"; // Restore it
+        document.body.style.scrollSnapType = "none";
+      } else document.body.style.scrollSnapType = "y proximity"; // Restore it
     };
 
     window.addEventListener("keydown", handleKeyDown);
