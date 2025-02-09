@@ -348,6 +348,7 @@
 .fac-content .fac-middle-section .fac-text p {
   font-size: var(--font-18);
   color: var(--text-color);
+  opacity: 0.8;
   width: 27.525rem;
   line-height: 1.8;
 }
@@ -358,6 +359,7 @@
 
 .fac-content .fac-right-section .img {
   width: 37.5rem;
+  height: 100vh;
   /* margin-top: auto; */
   overflow: hidden;
 }
@@ -365,7 +367,7 @@
 .fac-content .fac-right-section .img img {
   width: auto;
   height: auto;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 /* --------- facilities more -----------  */
@@ -507,6 +509,8 @@
 
   /* FACILITIES  */
 
+  /* --- header --- */
+
   .fac-header .fac-left-section h3 {
     font-size: (var(--font-18));
     width: 10.7142857142857rem;
@@ -530,6 +534,31 @@
   .fac-header .right-section.fac-r-img {
     width: 23.9285714285714rem;
     height: 15.4285714285714rem;
+  }
+
+  /* --- content --- */
+  .fac-content .fac-left-section img {
+    width: 10rem;
+    height: 10rem;
+  }
+  .fac-content .fac-middle-section h2:first-child {
+    font-size: 3.57142857142857rem;
+  }
+  .fac-content .fac-middle-section .fac-text p {
+    font-size: 1.28571428571429rem;
+    width: 23.9285714285714rem;
+  }
+  .fac-content .fac-right-section .img {
+    width: 32.3571428571429rem;
+    /* width: 20.3571428571429rem; */
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .fac-content .fac-right-section .img img {
+    /* width: 100%;
+    height: 100%; */
+    transform: translateX(-6%);
   }
 }
 
