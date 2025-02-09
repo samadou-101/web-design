@@ -380,8 +380,9 @@
 .fac-more .two,
 .fac-more .three {
   display: flex;
-  /* justify-content: space-between; */
-  gap: 9.375rem;
+  justify-content: space-between;
+  /* gap: 9.375rem; */
+
   padding-bottom: 3.125rem;
   border-bottom: 1px solid rgba(49, 63, 56, 0.24);
 
@@ -395,15 +396,17 @@
 .fac-more .three .img {
   width: 17.75rem;
   height: 17.75rem;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   overflow: hidden;
 }
 .fac-more .two .img img,
 .fac-more .three .img img {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .fac-more .three .img img {
@@ -560,6 +563,12 @@
     height: 100%; */
     transform: translateX(-6%);
   }
+  /* -------- more -------- */
+  .fac-more .two .img,
+  .fac-more .three .img {
+    width: 15.5rem;
+    height: 15.5rem;
+  }
 }
 
 @media (max-width: 1375px) {
@@ -613,6 +622,18 @@
     margin: 0;
     width: 51rem;
     height: 34rem;
+  }
+
+  /* -------------- FACILITIES -------------- */
+
+  /* ---- more ----  */
+  .fac-more .two h2:last-of-type {
+    /* margin-right: 9.75rem; */
+    width: 42rem;
+  }
+
+  .fac-more .three h2:last-of-type {
+    width: 42rem;
   }
 }
 
