@@ -184,6 +184,7 @@
 }
 
 /*  ----------------------  FACILITIES  ------------------------------------------*/
+
 .facilities-container {
   display: flex;
   flex-direction: column;
@@ -218,13 +219,15 @@
   color: var(--text-color);
 }
 
-.fac-header .fac-left-section .text .img {
+/* .fac-header .fac-left-section .text .img { */
+.fac-header .fac-left-section .img {
   width: 27.6875rem;
   height: 17.875rem;
   overflow: hidden;
 }
 
-.fac-header .fac-left-section .text .img img {
+/* .fac-header .fac-left-section .text .img img { */
+.fac-header .fac-left-section .img img {
   width: auto;
   height: auto;
 }
@@ -428,6 +431,8 @@
 
 /* -------------- RESPONSIVENESS --------------- */
 
+/* ------------- ROOMS ---------------- */
+
 @media (max-width: 1800px) {
   .header h1 {
     font-size: var(--font-120);
@@ -499,6 +504,33 @@
     width: 44rem;
     margin-left: auto;
   }
+
+  /* FACILITIES  */
+
+  .fac-header .fac-left-section h3 {
+    font-size: (var(--font-18));
+    width: 10.7142857142857rem;
+  }
+  .fac-header .fac-left-section .img {
+    width: 23.9285714285714rem;
+    height: 15.4285714285714rem;
+  }
+  .fac-header .fac-left-section .img img {
+    width: 100%;
+    height: 100%;
+  }
+  .fac-header .middle-section .header h1 {
+    font-size: 8.92857142857143rem;
+    width: 39.0714285714286rem;
+  }
+  .fac-header .middle-section .header .content {
+    font-size: 1.28571428571429rem;
+    width: 39.0714285714286rem;
+  }
+  .fac-header .right-section.fac-r-img {
+    width: 23.9285714285714rem;
+    height: 15.4285714285714rem;
+  }
 }
 
 @media (max-width: 1375px) {
@@ -554,3 +586,5 @@
     height: 34rem;
   }
 }
+
+/* -------------- FACILITIES -------------- */

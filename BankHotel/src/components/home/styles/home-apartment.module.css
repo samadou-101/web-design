@@ -31,8 +31,9 @@
   z-index: -1;
 }
 .background-img img {
-  width: auto;
+  width: 100%;
   height: auto;
+  object-fit: cover;
 }
 .wave {
   position: absolute;

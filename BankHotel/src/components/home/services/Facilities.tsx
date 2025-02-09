@@ -13,7 +13,7 @@ const Facilities = () => {
       <div className={style["fac-header"]}>
         <div className={style["fac-left-section"]}>
           <h3>ART & CONGRESS HALL</h3>
-          <div className="img">
+          <div className={style["img"]}>
             <img src={manKitchen} alt="" />
           </div>
         </div>

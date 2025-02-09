@@ -45,3 +45,14 @@ body {
 li {
   list-style: none;
 }
+
+@media (max-width: 1440px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1024px) {
+  html {
+    font-size: 13px;
+  }
+}

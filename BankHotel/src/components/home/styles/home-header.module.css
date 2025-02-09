@@ -50,14 +50,8 @@
     display: flex;
     align-items: center;
   }
-  html {
-    font-size: 14px;
-  }
 }
 @media (max-width: 1024px) {
-  html {
-    font-size: 13px;
-  }
   .nav {
     gap: 2.5rem;
   }
