@@ -36,7 +36,7 @@
 
 .menu-icon {
   position: fixed;
-  right: 0;
+  right: 1rem;
   /* top: 0; */
   width: 40px;
   height: 10px;
@@ -85,7 +85,17 @@
 @media (max-width: 1024px) {
   .header-container {
     position: fixed;
+    top: 0;
+    z-index: 999;
+    height: 3rem;
+    width: calc(100vw + 4rem);
+    padding: 0.5rem 1rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    /* background-color: green; */
+    background-color: var(--background-color);
   }
+
   .nav {
     display: none;
   }
