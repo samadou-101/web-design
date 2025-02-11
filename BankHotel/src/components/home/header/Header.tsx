@@ -33,6 +33,7 @@ const Header: React.FC = () => {
       >
         +38 032 297 50 20
       </motion.span>
+      <div className={style["menu-icon"]}></div>
     </div>
   );
 };

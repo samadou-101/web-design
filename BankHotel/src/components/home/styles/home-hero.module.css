@@ -209,12 +209,12 @@
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1200px) {
+@media (max-width: 1190px) {
   .hero-container {
     height: fit-content;
   }
   .background-container {
-    background-size: contain;
+    background-size: cover;
   }
   .hero-intro {
     height: fit-content;
