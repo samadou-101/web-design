@@ -21,6 +21,13 @@ const About = () => {
               <span>US</span>
             </p>
           </div>
+          <motion.section
+            className={style["left-img-mobile"]}
+            initial={{ opacity: 0, x: -200 }}
+            transition={{ duration: 1, ease: "linear" }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.0 }}
+          ></motion.section>
           <div className={style["text"]}>
             <h4>High Quality</h4>
             <p>

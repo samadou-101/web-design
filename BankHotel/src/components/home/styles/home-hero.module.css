@@ -275,14 +275,12 @@
   }
 }
 @media (max-width: 900px) {
+  .hero-action {
+    scroll-snap-align: unset;
+  }
   .hero-intro .btn {
     display: none;
   }
-  .hero-intro .info p {
-    text-align: right;
-  }
-}
-@media (max-width: 750px) {
   .hero-intro .info p {
     text-align: right;
   }
@@ -310,6 +308,11 @@
   .background-container {
     background-size: cover;
     background-position: calc(-400px);
+  }
+}
+@media (max-width: 750px) {
+  .hero-intro .info p {
+    text-align: right;
   }
 }
 @media (max-width: 575px) {
