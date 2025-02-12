@@ -168,13 +168,13 @@
   justify-content: center; */
   margin-top: auto;
 }
-.big-room img {
+.big-room picture img {
   width: auto;
   height: auto;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: translateX(-30px);
+  transform: translateX(-20px);
 }
 .left-section,
 .middle-section,
@@ -634,7 +634,7 @@
     /* width: 51rem; */
     /* height: 34rem; */
   }
-  .right-section .big-room img {
+  .right-section .big-room picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -682,13 +682,13 @@
   .right-section .big-room {
     width: 100%;
   }
-  .right-section .big-room img {
+  .right-section .big-room picture img {
     width: auto;
     transform: translateX(-500px);
-    object-position: center;
+    /* object-position: center; */
   }
 }
-/* @media (max-width: 920px) {
+@media (max-width: 850px) {
   .rooms {
     display: flex;
     flex-direction: column;
@@ -709,8 +709,23 @@
   .middle-section .text {
     order: 2;
   }
+  .right-section .big-room {
+    width: 100%;
+  }
+  .right-section .big-room picture img {
+    transform: translate(0);
+    width: auto;
+    width: 100%;
+  }
+}
+/* @media (max-width: 850px) {
+  .right-section .big-room picture {
+    width: auto;
+    height: auto;
+  }
 } */
-@media (max-width: 800px) {
+
+/* @media (max-width: 800px) {
   .rooms-apartments-container {
     padding-top: 7rem;
   }
@@ -730,4 +745,4 @@
     width: 55vw;
     font-size: 3vw;
   }
-}
+} */

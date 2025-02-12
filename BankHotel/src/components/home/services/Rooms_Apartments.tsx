@@ -54,7 +54,7 @@ const Rooms_Apartments = () => {
               <picture className={style["img"]}>
                 <source srcSet={bigRoom} media="(min-width: 851px)" />
                 <source srcSet={bigRoom700} media="(max-width: 850px)" />
-                <img src="/images/image-small.jpg" alt="Responsive Example" />
+                <img src={bigRoom700} alt="" />
               </picture>
               {/* <img src={bigRoom} alt="" /> */}
             </div>
