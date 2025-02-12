@@ -2,6 +2,8 @@ import style from "../styles/home-services.module.css";
 import star from "../../../assets/Star.svg";
 import littleRoom from "../../../assets/little-room1.png";
 import bigRoom from "../../../assets/big-room1.png";
+import bigRoom700 from "../../../assets/big-room-700.png";
+
 import nextRoomBtn from "../../../assets/next-room-btn.svg";
 // import Since from "../shared/Since";
 const Rooms_Apartments = () => {
@@ -49,7 +51,12 @@ const Rooms_Apartments = () => {
           </section>
           <section className={style["right-section"]}>
             <div className={style["big-room"]}>
-              <img src={bigRoom} alt="" />
+              <picture className={style["img"]}>
+                <source srcSet={bigRoom} media="(min-width: 851px)" />
+                <source srcSet={bigRoom700} media="(max-width: 850px)" />
+                <img src="/images/image-small.jpg" alt="Responsive Example" />
+              </picture>
+              {/* <img src={bigRoom} alt="" /> */}
             </div>
           </section>
         </div>
