@@ -389,10 +389,8 @@
   display: flex;
   justify-content: space-between;
   /* gap: 9.375rem; */
-
   padding-bottom: 3.125rem;
   border-bottom: 1px solid rgba(49, 63, 56, 0.24);
-
   align-items: center;
   width: 100%;
 }
@@ -695,7 +693,7 @@
   .rooms {
     width: 100vw;
     position: relative;
-    left: calc(-1 * 1.875rem);
+    /* left: calc(-1 * 1.875rem); */
   }
   .left-section {
     display: none;
@@ -711,6 +709,29 @@
   }
   .middle-section .current-room {
     align-self: center;
+  }
+
+  .fac-more .two,
+  .fac-more .three {
+    width: auto;
+  }
+  .fac-more .two h2:first-of-type,
+  .fac-more .three h2:first-of-type {
+    font-size: 3.57142857142857rem;
+    margin: 0;
+  }
+
+  .fac-more .two h2:last-of-type,
+  .fac-more .three h2:last-of-type {
+    font-size: 3.57142857142857rem;
+    width: auto;
+    width: 30rem;
+    /* width: fit-content !important; */
+    /* width: 45rem; */
+  }
+  .fac-more .two > img:last-of-type,
+  .fac-more .three > img:last-of-type {
+    width: 8.57142857142857rem;
   }
 }
 @media (max-width: 1100px) {
