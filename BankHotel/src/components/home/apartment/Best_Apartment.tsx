@@ -4,9 +4,9 @@ import yellowWave from "../../../assets/yellow-wave.png";
 const Best_Apartment = () => {
   return (
     <div className={style["apartment-container"]}>
-      <div className={style["background-img"]}>
+      {/* <div className={style["background-img"]}>
         <img src={apartmentBackground} alt="" />
-      </div>
+      </div> */}
       <div className={style["wave"]}>
         <img src={yellowWave} alt="" />
       </div>

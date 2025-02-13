@@ -14,9 +14,12 @@
   position: relative;
   height: 100vh;
   width: 100vw;
-  margin-left: -1.875rem;
-  margin-right: -1.875rem;
+  left: calc(-1 * 1.875rem);
   scroll-snap-align: start;
+  background-image: url(../../../assets/apartment-background.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 .background-img {
   position: absolute;
@@ -85,14 +88,67 @@
     width: 31.4285714285714rem;
   }
 }
-
+@media (max-width: 1440px) {
+}
 @media (max-width: 1240px) {
+  .content {
+    padding-top: 3rem;
+  }
   .content h1 {
-    font-size: 5.92857142857143rem;
+    font-size: 5.72857142857143rem;
     width: 40rem;
   }
   .content p {
     font-size: 1.28571428571429rem;
     width: 23.5714285714286rem;
+  }
+  .apartment-container {
+    background-size: contain 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .apartment-container {
+    background-position-x: left;
+  }
+  .wave {
+    top: 40%;
+  }
+}
+@media (max-width: 650px) {
+  .apartment-container {
+    background-image: url("../../../assets/best_apartment_mobile.png");
+  }
+  .content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+  }
+  .content h1 {
+    font-size: 4.5rem;
+    width: 90%;
+  }
+  .content p {
+    width: 20rem;
+    align-self: flex-end;
+  }
+  .wave {
+    top: 50%;
+  }
+}
+
+@media (max-width: 360px) {
+  .content {
+    padding-left: 1rem;
+  }
+  .content h1 {
+    font-size: 4rem;
+    width: 90%;
+  }
+  .content p {
+    width: 20rem;
+    align-self: flex-end;
   }
 }
