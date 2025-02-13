@@ -854,6 +854,45 @@
     right: 0rem;
   }
 }
+@media (max-width: 750px) {
+  /* Facilities */
+  .facilities-container {
+    width: 100vw;
+    position: relative;
+    left: calc(-1 * 1.875rem);
+  }
+  .fac-header .fac-left-section {
+    width: 8rem;
+    width: 12vw;
+  }
+  .fac-header .fac-left-section .img {
+    position: relative;
+    left: 19vw;
+    left: 100%;
+    top: 3rem;
+    width: 25rem;
+    height: 15rem;
+  }
+  .fac-header .fac-middle-section .header {
+    height: auto;
+    width: 90%;
+  }
+  .fac-header .fac-middle-section .header h1:last-child {
+    /* font-size: 65px; */
+    width: 100%;
+  }
+  .fac-header .fac-right-section {
+  }
+}
+@media (max-width: 620px) {
+  .fac-header .fac-middle-section .header {
+    width: 100%;
+  }
+  .fac-header .fac-middle-section .header h1 {
+    width: 100%;
+    font-size: 5rem;
+  }
+}
 @media (max-width: 500px) {
   .middle-section {
     padding-left: 1.5rem;
@@ -865,5 +904,27 @@
   .middle-section .text p {
     font-size: 1rem;
     width: 100%;
+  }
+
+  /* Facilities */
+  .fac-header {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .fac-header::before {
+    content: "ART & CONGRESS HALL";
+    color: var(--text-color);
+    position: absolute;
+    right: 0;
+    font-size: 1.38461538461538rem;
+    width: 15.3846153846154rem;
+    text-align: right;
+  }
+  .fac-header .fac-left-section {
+    width: 3rem;
+  }
+  .fac-header .fac-right-section {
+    display: none;
   }
 }
