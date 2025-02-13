@@ -25,7 +25,6 @@
 
 .rooms-apartments-container {
   padding: 17.57rem 0 12.5rem 0;
-  /* width: 100%; */
 }
 .content {
   display: flex;
@@ -54,12 +53,8 @@
   display: flex;
   justify-content: space-between;
   height: 63.375rem;
-  /* height: auto; */
   height: 100vh;
-  /* height: 100vh; */
   scroll-snap-align: start;
-  /* border: 1px solid cyan; */
-  /* min-height: 100vh; */
 }
 .left-section {
   display: flex;
@@ -210,6 +205,7 @@
   justify-content: space-between;
   padding: 1rem 0;
   height: 100vh;
+  height: 100%;
 }
 
 .fac-header .fac-left-section h3 {
@@ -228,8 +224,9 @@
 
 /* .fac-header .fac-left-section .text .img img { */
 .fac-header .fac-left-section .img img {
-  width: auto;
+  width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 /* Middle section */
@@ -243,6 +240,7 @@
 
 .fac-header .fac-middle-section .header h1 {
   font-size: 105px;
+  font-size: 6.56rem;
   color: var(--text-color);
 }
 
@@ -654,6 +652,33 @@
     width: 42rem;
   }
 }
+@media (max-width: 1250px) {
+  /* facilitie */
+
+  .fac-header .fac-left-section .img {
+    width: 20rem;
+    height: 15rem;
+  }
+  .fac-header .fac-middle-section .header h1 {
+    /* font-size: 50px; */
+    font-size: 6rem;
+  }
+  .fac-header .fac-right-section .fac-r-img {
+    padding-top: 0;
+    /* width: 100%; */
+    width: 20rem;
+    height: 16rem;
+  }
+  .fac-header .fac-right-section .fac-r-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .fac-header .fac-right-section .hotel-premium {
+    width: 10rem;
+    height: 10rem;
+  }
+}
 @media (max-width: 1150px) {
   .rooms {
     width: 100vw;
@@ -676,6 +701,59 @@
     align-self: center;
   }
 }
+@media (max-width: 1100px) {
+  /* facilities */
+  .fac-header .fac-left-section .img {
+    width: 17rem;
+    height: 13rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .fac-header {
+    min-height: calc(100vh - 1.07692307692308rem) !important;
+    padding-top: 3.07692307692308rem;
+  }
+  .fac-header .fac-left-section {
+    justify-content: center;
+  }
+  .fac-header .fac-left-section h3 {
+    display: none;
+  }
+  .fac-header .fac-middle-section {
+    width: 70%;
+  }
+  .fac-header .fac-middle-section .header {
+    /* justify-content: center; */
+    width: 100%;
+  }
+  .fac-header .fac-middle-section .header h1:first-child {
+    position: relative;
+    left: 5rem;
+  }
+  .fac-header .fac-middle-section .header h1:last-child {
+    text-align: right;
+    position: relative;
+    right: 4rem;
+  }
+  .fac-header .fac-right-section {
+    padding-top: 0;
+  }
+  .fac-header .fac-right-section .fac-r-img {
+    display: none;
+  }
+  .fac-header .fac-right-section .hotel-premium {
+    display: none;
+  }
+  .fac-header .fac-right-section::before {
+    content: "ART & CONGRESS HALL";
+    color: var(--text-color);
+    font-size: 1.38461538461538rem;
+    width: 15.3846153846154rem;
+    text-align: right;
+    background-image: none;
+  }
+}
 @media (max-width: 920px) {
   .right-section {
     width: 50%;
@@ -687,6 +765,22 @@
     width: auto;
     transform: translateX(-500px);
     /* object-position: center; */
+  }
+
+  /* Facilities */
+
+  .fac-header .fac-middle-section .header h1:first-child {
+    position: relative;
+    left: 3rem;
+  }
+  .fac-header .fac-middle-section .header h1:last-child {
+    text-align: right;
+    position: relative;
+    right: 0rem;
+  }
+  .fac-header .fac-right-section::before {
+    font-size: 1.18461538461538rem;
+    width: 11.3846153846154rem;
   }
 }
 @media (max-width: 850px) {
@@ -732,6 +826,29 @@
     transform: translate(0);
     width: auto;
     width: 100%;
+  }
+}
+@media (max-width: 785px) {
+  /* Facilities */
+
+  .fac-header .fac-middle-section {
+    padding-bottom: 5rem;
+  }
+  .fac-header .fac-middle-section .header {
+    justify-content: start;
+    gap: 1rem;
+  }
+  .fac-header .fac-middle-section .header h1 {
+    font-size: 5.38rem;
+  }
+  .fac-header .fac-middle-section .header h1:first-child {
+    position: relative;
+    left: 0rem;
+  }
+  .fac-header .fac-middle-section .header h1:last-child {
+    text-align: right;
+    position: relative;
+    right: 0rem;
   }
 }
 @media (max-width: 500px) {
