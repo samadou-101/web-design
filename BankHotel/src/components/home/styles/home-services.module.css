@@ -976,6 +976,24 @@
   }
 }
 @media (max-width: 700px) {
+  .rooms-apartments-container .header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+  }
+  .rooms-apartments-container .header p {
+    width: 40%;
+  }
+  .rooms-apartments-container .header::before {
+    content: "70 ROOMS";
+    position: absolute;
+    opacity: 0.8;
+    top: -10%;
+    right: 0;
+    color: var(--text-color);
+    font-size: 1.5rem;
+  }
   .fac-content .fac-left-section img {
     left: 6rem;
   }
@@ -1040,6 +1058,12 @@
 }
 
 @media (max-width: 620px) {
+  .rooms-apartments-container .header h1 {
+    font-size: 5.5rem;
+  }
+  .rooms-apartments-container .header p {
+    width: 50%;
+  }
   .fac-header .fac-middle-section .header {
     width: 100%;
   }
@@ -1050,6 +1074,9 @@
 }
 
 @media (max-width: 500px) {
+  .rooms-apartments-container .header p {
+    width: 60%;
+  }
   .middle-section {
     padding-left: 1.5rem;
   }
@@ -1109,6 +1136,9 @@
 }
 
 @media (max-width: 450px) {
+  .rooms-apartments-container .header p {
+    width: 70%;
+  }
   .fac-content .fac-left-section img {
     width: 4rem;
     height: 4rem;
@@ -1119,6 +1149,9 @@
 }
 
 @media (max-width: 420px) {
+  .rooms-apartments-container .header h1 {
+    font-size: 4.5rem;
+  }
   .fac-content .fac-middle-section {
     display: flex;
     flex-direction: column;
