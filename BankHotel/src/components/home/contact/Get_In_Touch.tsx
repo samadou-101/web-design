@@ -3,6 +3,7 @@ import contactPic from "../../../assets/contact-pic.png";
 import contactStar from "../../../assets/contact-star.png";
 import curve from "../../../assets/Curve.png";
 import dropBtn from "../../../assets/drop-btn.png";
+import bookRoomBtn from "../../../assets/book-room-btn-contact.png";
 const Get_In_Touch = () => {
   return (
     <div className={style["contact-container"]}>
@@ -26,6 +27,9 @@ const Get_In_Touch = () => {
       </div>
       {/* Progress */}
       <div className={style["find-room"]}>
+        <div className={style["book-room-btn"]}>
+          <img src={bookRoomBtn} alt="" />
+        </div>
         <span>FIND A ROOM</span>
         <div className={style["action"]}>
           <div className={style["check-in"]}>

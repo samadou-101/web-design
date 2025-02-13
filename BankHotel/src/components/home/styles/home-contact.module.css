@@ -12,15 +12,16 @@
 }
 .contact-container {
   position: relative;
-  height: 142.3125rem;
+  overflow: hidden;
   height: 114.25rem;
   background-color: var(--white-color);
-  margin-left: -1.875rem;
-  margin-right: -1.875rem;
   padding: 0 1.875rem;
-  padding-top: 18.75rem;
-  overflow: hidden;
+  padding-top: 15.75rem;
   padding-bottom: 12.5rem;
+
+  height: auto;
+  width: 100vw;
+  left: calc(-1 * 1.875rem);
 }
 .contact-container::after {
   content: "";
@@ -109,6 +110,9 @@
   gap: 3.125rem;
 }
 
+.find-room .book-room-btn {
+  display: none;
+}
 .find-room span {
   font-size: var(--font-26);
   color: var(--text-color);
@@ -174,9 +178,6 @@
     font-size: 3.125rem;
   }
 
-  .g-i-t {
-  }
-
   .g-i-t .background {
     width: 25rem;
     height: 25rem;
@@ -186,9 +187,6 @@
     font-size: var(--font-22);
   }
 
-  .g-i-t .title {
-  }
-
   .g-i-t .title img {
     width: 8rem;
     height: 8rem;
@@ -196,41 +194,6 @@
 
   .g-i-t .title span {
     font-size: 15.625rem;
-  }
-
-  .g-i-t .title span:first-of-type {
-  }
-
-  .g-i-t .title span:last-of-type {
-  }
-
-  .find-room {
-  }
-
-  .find-room span {
-  }
-
-  .find-room .action {
-  }
-
-  .find-room .action .check-in {
-  }
-
-  .find-room .action .check-in::before {
-  }
-
-  .find-room .action .check-in span,
-  .find-room .action .check-out span {
-  }
-
-  .find-room .action .check-in img,
-  .find-room .action .check-out img {
-  }
-
-  .find-room .action .check-out {
-  }
-
-  .find-room .action .book-room {
   }
 }
 
@@ -244,7 +207,117 @@
   .contact-container {
     height: 97.7857142857143rem;
   }
+  .g-i-t .background {
+    width: 23rem;
+    height: 23rem;
+  }
   .g-i-t .title span {
     font-size: 11.625rem;
+  }
+}
+@media (max-width: 950px) {
+  .contact-container {
+    height: auto;
+  }
+  .g-i-t .title span {
+    font-size: 9rem;
+  }
+  .g-i-t .background {
+    width: 20rem;
+    height: 20rem;
+  }
+  .find-room {
+    margin-top: 2rem;
+  }
+  .contact-container .action {
+    width: 80%;
+  }
+  .contact-container .action .check-in,
+  .contact-container .action .check-out {
+    width: 33%;
+    padding: 0;
+    gap: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 700px) {
+  .g-i-t .background {
+    width: 15rem;
+    height: 15rem;
+  }
+  .g-i-t .title img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .g-i-t .title span {
+    font-size: 7rem;
+  }
+}
+@media (max-width: 650px) {
+  .contact-container .phone-num h2 {
+    font-size: 3rem;
+  }
+  .g-i-t .title img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .g-i-t .background {
+    right: 0;
+  }
+  .find-room {
+    margin-top: 5em;
+  }
+}
+@media (max-width: 500px) {
+  .find-room span {
+    display: none;
+  }
+  .find-room .action {
+    display: none;
+  }
+  .find-room .book-room-btn {
+    display: block !important;
+    margin-top: 4rem;
+  }
+}
+@media (max-width: 420px) {
+  .contact-container {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  .g-i-t .background {
+    top: 80%;
+    width: 14rem;
+    height: 14rem;
+  }
+}
+
+@media (max-width: 405px) {
+  .g-i-t .title span {
+    font-size: 5.5rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .contact-container {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  .contact-container .phone-num h2 {
+    font-size: 2rem;
+  }
+  .g-i-t .title span {
+    font-size: 4.5rem;
+  }
+  .g-i-t .background {
+    width: 12rem;
+    height: 12rem;
+  }
+  .find-room .book-room-btn {
+    /* margin-top: 6rem; */
+  }
+  .find-room .book-room-btn img {
+    width: 100px;
   }
 }
