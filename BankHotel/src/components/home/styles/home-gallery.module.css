@@ -16,19 +16,27 @@
   justify-content: space-between;
   margin-top: 10rem;
   /* border-top: 1px solid green; */
+  height: auto;
+  width: 100vw;
+  position: relative;
+  left: calc(-1 * 1.875rem);
 }
 .gal-left-section,
 .gal-middle-section,
 .gal-rgiht-section {
   display: flex;
   flex-direction: column;
+  /* height: 120vh; */
 }
 
 /* Left Section  */
 
 .gal-left-section {
   position: relative;
-  gap: 56.25rem;
+  /* gap: 56.25rem; */
+  width: 25%;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .gal-left-section h3 {
@@ -38,7 +46,7 @@
   opacity: 0.8;
 }
 .gal-left-section .img1 {
-  position: absolute;
+  /* position: absolute; */
   width: fit-content;
   width: 19.5rem;
   height: 17.75rem;
@@ -48,6 +56,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .gal-left-section .img1 img {
@@ -69,9 +78,10 @@
 /* Middle Section  */
 .gal-middle-section {
   align-items: center;
-  padding-left: 6rem;
+  padding-left: 3rem;
+  overflow-x: hidden;
+  width: 55%;
   /* margin-left: 11.875rem; */
-  /* justify-content: space-between; */
 }
 .gal-middle-section .img1 {
   width: 9.375rem;
@@ -106,6 +116,7 @@
   align-items: center;
   margin-top: 9.375rem;
   padding-bottom: 29rem;
+  width: 100%;
 }
 .gal-middle-section .img2 img {
   width: 100%;
@@ -136,30 +147,31 @@
 .gal-right-section {
   padding-top: 22.3125rem;
   /* margin-left: auto; */
-  position: relative;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
 }
 .gal-right-section .img1 {
-  position: absolute;
-  width: 19.5rem;
+  /* position: absolute; */
   height: 25rem;
-  right: -1.875rem;
   overflow: hidden;
-  margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  width: 70%;
 }
 .gal-right-section .img1 img {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
 }
 .gal-right-section .img2 {
   overflow: hidden;
-  width: 27.6875rem;
+  width: 95%;
   height: 17.75rem;
-  /* display: flex;
-  align-items: center; */
-  margin-top: 68.875rem;
   padding-top: 3.5rem;
 }
 .gal-right-section .img2 img {
@@ -217,14 +229,22 @@
     width: 21rem;
   }
 }
-
+@media (max-width: 1440px) {
+  .gal-right-section .img1 {
+    display: flex;
+  }
+  .gal-right-section .img1 img {
+    object-position: left;
+    position: relative;
+  }
+  .gal-middle-section .img2 {
+    width: 95%;
+  }
+  .gal-right-section .img2 {
+    width: 90%;
+  }
+}
 @media (max-width: 1275px) {
-  .gal-left-section .img1 {
-    width: 13.2142857142857rem;
-  }
-  .gal-left-section .img2 {
-    width: 11.75rem;
-  }
   .gal-middle-section h2 {
     font-size: 4.57142857142857rem;
     text-align: center;
@@ -246,13 +266,12 @@
   }
 }
 
+@media (max-width: 1250px) {
+  .gal-right-section .img2 {
+    width: 85%;
+  }
+}
 @media (max-width: 1175px) {
-  .gal-left-section .img1 {
-    width: 11.2142857142857rem;
-  }
-  .gal-left-section .img2 {
-    width: 9.75rem;
-  }
   .gal-middle-section h2 {
     font-size: 4.57142857142857rem;
     text-align: center;
@@ -267,26 +286,15 @@
     justify-content: center;
   }
   .gal-right-section .img1 {
-    width: 11rem;
   }
   .gal-right-section .img2 {
-    width: 17rem;
   }
 }
 
 @media (max-width: 1075px) {
-  .gal-left-section .img1 {
-    width: 11.2142857142857rem;
-  }
-  .gal-left-section .img2 {
-    width: 11.75rem;
-  }
   .gal-middle-section h2 {
     font-size: 4.57142857142857rem;
     text-align: center;
-  }
-  .gal-middle-section .img2 {
-    width: 40rem;
   }
 
   .gal-right-section .img1 {
@@ -294,10 +302,32 @@
     align-items: center;
     justify-content: center;
   }
+}
+@media (max-width: 1024px) {
+  .gal-left-section .img1 {
+    width: 75%;
+  }
+  .gal-left-section .img2 {
+    width: 80%;
+  }
+  .gal-middle-section {
+    padding-left: 0;
+  }
+  .gal-middle-section .img2 {
+    width: 98%;
+    padding: 0;
+    height: 35%;
+    overflow: hidden;
+  }
+  .gal-middle-section .closing {
+    margin-top: 1rem;
+  }
   .gal-right-section .img1 {
-    width: 9rem;
+    width: 80%;
+    height: 35%;
   }
   .gal-right-section .img2 {
-    width: 15rem;
+    width: 75%;
+    width: 100%;
   }
 }
