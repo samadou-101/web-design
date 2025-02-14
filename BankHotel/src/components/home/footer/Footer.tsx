@@ -12,7 +12,7 @@ const Footer = () => {
           restaurant, conference-hall, and art-event
         </p>
         <span className={style["rights"]}>
-          {new Date().getFullYear()} Developed By{" "}
+          {"\u00A9"} {new Date().getFullYear()} Developed By{" "}
           <a href="https://github.com/samadou-101">Abdessamad Saihi</a>
         </span>
       </div>
