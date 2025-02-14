@@ -12,7 +12,8 @@ const Footer = () => {
           restaurant, conference-hall, and art-event
         </p>
         <span className={style["rights"]}>
-          2025 All rights reserved. BankHotel
+          {new Date().getFullYear()} Developed By{" "}
+          <a href="https://github.com/samadou-101">Abdessamad Saihi</a>
         </span>
       </div>
       <div className={style["news"]}>
