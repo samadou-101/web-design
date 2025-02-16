@@ -1,1 +1,14 @@
 @import "tailwindcss";
+@layer {
+  body {
+    @apply bg-glass;
+  }
+}
+@theme {
+  --color-primary: #ff702b;
+  --color-secondary: #2f2105;
+  --color-accents: #f9d9aa;
+  --color-glass: #ffffff;
+  --color-light: #7e7d7a;
+  --color-hero: #f6ebda;
+}
