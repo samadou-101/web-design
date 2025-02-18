@@ -1,10 +1,11 @@
 import { FaShoppingCart } from "react-icons/fa";
-
+import coffeeImg from "../../../assets/hero/hero-coffee.png";
+import coffeeBg from "../../../assets/hero/hero-rounded-bg.png";
 const HeroContent = () => {
   return (
-    <div className="">
-      <div className="flex w-1/2 flex-col gap-10 max-md:w-[60%]">
-        <h1 className="text-secondary w-[90%] text-[3.5vw] leading-normal font-bold max-md:w-full max-md:text-[5vw]">
+    <div className="flex w-full gap-[10vw]">
+      <div className="flex w-1/2 flex-col gap-10 max-md:w-[80%]">
+        <h1 className="text-secondary z-50 w-[90%] text-[3.5vw] leading-normal font-bold max-lg:w-full max-lg:text-[4.3vw] max-md:text-[5.5vw]">
           Enjoy Your <span className="text-primary">coffee</span> before your
           activity
         </h1>
@@ -18,6 +19,20 @@ const HeroContent = () => {
             <FaShoppingCart className="text-primary" />
           </button>
         </div>
+      </div>
+
+      {/* iamge content */}
+      <div className="relative z-50 flex h-fit w-1/3 items-center justify-center pb-8">
+        <img
+          src={coffeeBg}
+          alt=""
+          className="absolute top-1/2 left-1/2 z-0 -translate-x-1/2 -translate-y-1/2 transform max-xl:max-w-[95%]"
+        />
+        <img
+          src={coffeeImg}
+          alt=""
+          className="relative z-50 max-w-full max-xl:max-w-[85%]"
+        />
       </div>
     </div>
   );
