@@ -3,7 +3,7 @@ import coffeeImg from "../../../assets/hero/hero-coffee.png";
 import coffeeBg from "../../../assets/hero/hero-rounded-bg.png";
 const HeroContent = () => {
   return (
-    <div className="flex w-full gap-[10vw]">
+    <div className="flex w-full gap-[13vw]">
       <div className="flex w-1/2 flex-col gap-10 max-md:w-[80%]">
         <h1 className="text-secondary z-50 w-[90%] text-[3.5vw] leading-normal font-bold max-lg:w-full max-lg:text-[4.3vw] max-md:text-[5.5vw]">
           Enjoy Your <span className="text-primary">coffee</span> before your
