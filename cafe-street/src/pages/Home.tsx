@@ -7,8 +7,7 @@ import Hero from "../components/home/hero/Hero";
 
 const Home = () => {
   return (
-    <div className="bg-hero">
-      <Header />
+    <div className="w-screen">
       <Hero />
       <PopularProducts />
       <HowTo />

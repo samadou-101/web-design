@@ -1,17 +1,22 @@
 @import "tailwindcss";
 @layer {
+  * {
+    @apply box-border;
+  }
+  html {
+    @apply h-full w-full;
+  }
   body {
-    @apply bg-glass font-poppins font-normal;
+    @apply bg-glass font-poppins w-full font-normal;
+  }
+  #root {
+    @apply h-full w-full overflow-x-hidden;
   }
   .nav-element {
     @apply hover:text-primary cursor-pointer transition-colors duration-300;
   }
-  .shopping {
-    /* @apply relative; */
-  }
-  .shopping::before {
-    content: "";
-    @apply bg-primary top-0 right-0 h-2 w-2 rounded-full;
+  .containers {
+    @apply p-8;
   }
 }
 @theme {

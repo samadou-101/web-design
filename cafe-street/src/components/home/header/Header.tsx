@@ -5,7 +5,7 @@ import { IoMdMore } from "react-icons/io";
 
 const Header = () => {
   return (
-    <header className="flex w-full items-center justify-around max-lg:justify-between">
+    <header className="relative z-10 flex w-full items-center justify-between max-lg:justify-between">
       <div className="max-lg:h-auto max-lg:w-[120px]">
         <img className="max-w-full max-lg:max-w-[90%]" src={logo} alt="logo" />
       </div>
