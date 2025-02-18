@@ -1,14 +1,13 @@
-import { CiShoppingBasket } from "react-icons/ci";
 import logo from "../../../assets/hero/logo_coffe.svg";
 import SearchBar from "./SearchBar";
 import { PiShoppingCartSimpleLight } from "react-icons/pi";
 const Header = () => {
   return (
-    <header className="flex w-full items-center justify-around">
-      <div>
-        <img className="w-max-full" src={logo} alt="logo" />
+    <header className="flex w-full items-center justify-around max-lg:justify-between">
+      <div className="max-lg:h-auto max-lg:w-[120px]">
+        <img className="max-w-full max-lg:max-w-[90%]" src={logo} alt="logo" />
       </div>
-      <nav className="flex w-1/5 items-center justify-between">
+      <nav className="flex w-1/4 items-center justify-between max-xl:w-[30%] max-lg:w-[40%] max-lg:text-sm max-md:justify-between">
         <a className="nav-element" href="">
           About us
         </a>

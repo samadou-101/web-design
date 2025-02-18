@@ -4,7 +4,6 @@ import HowTo from "../components/home/how_to/HowTo";
 import About from "../components/home/about/About";
 import Menu from "../components/home/menu/Menu";
 import Hero from "../components/home/hero/Hero";
-import { PiShoppingCartSimpleLight } from "react-icons/pi";
 
 const Home = () => {
   return (
