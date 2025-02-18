@@ -1,14 +1,28 @@
 @import "tailwindcss";
 @layer {
   body {
-    @apply bg-glass;
+    @apply bg-glass font-poppins font-normal;
+  }
+  .nav-element {
+    @apply hover:text-primary cursor-pointer transition-colors duration-300;
+  }
+  .shopping {
+    /* @apply relative; */
+  }
+  .shopping::before {
+    content: "";
+    @apply bg-primary top-0 right-0 h-2 w-2 rounded-full;
   }
 }
 @theme {
   --color-primary: #ff702b;
   --color-secondary: #2f2105;
+  --color-placeholder: #929292;
   --color-accents: #f9d9aa;
   --color-glass: #ffffff;
   --color-light: #7e7d7a;
   --color-hero: #f6ebda;
+  --color-background: #f6ebda;
+
+  --font-poppins: "Poppins", serif;
 }
