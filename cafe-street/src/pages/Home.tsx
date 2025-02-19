@@ -7,8 +7,10 @@ import Hero from "../components/home/hero/Hero";
 const Home = () => {
   return (
     <div className="w-screen">
-      <Hero />
-      <PopularProducts />
+      <div className="bg-background flex h-auto flex-col gap-[15vh]">
+        <Hero />
+        <PopularProducts />
+      </div>
       <HowTo />
       <About />
       <Menu />

@@ -15,9 +15,9 @@ const ProductCard: FC<IProductCard> = ({
   hot,
 }) => {
   return (
-    <div className="bg-glass border-background relative -top-full flex h-96 w-1/5 items-center justify-center rounded-2xl border-4 shadow-md">
+    <div className="bg-glass border-background relative -top-[90%] z-50 flex h-[170%] w-1/5 items-center justify-center rounded-2xl border-4 shadow-md">
       <div className="flex h-[90%] w-[90%] flex-col justify-between">
-        <div className="flex w-full flex-col items-center justify-around overflow-hidden rounded-[5px]">
+        <div className="flex w-full flex-col items-center justify-around overflow-hidden rounded-2xl">
           <img src={imgUrl} alt="" />
         </div>
         <div className="flex w-full justify-between">
