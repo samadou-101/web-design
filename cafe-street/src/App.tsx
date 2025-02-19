@@ -3,7 +3,7 @@ import background_1 from "./assets/hero/bg_img_hero.png";
 
 function App() {
   return (
-    <div className="bg-background w-screen overflow-x-hidden">
+    <div className="w-screen overflow-x-hidden">
       <Home />
       <div className="fixed -top-[3.0vw] -right-[6.0vw] h-auto w-1/3 min-w-[300px] overflow-hidden max-md:w-1/3 max-sm:min-w-[250px]">
         <img

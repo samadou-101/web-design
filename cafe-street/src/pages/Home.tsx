@@ -1,4 +1,3 @@
-import Header from "../components/home/header/Header";
 import PopularProducts from "../components/home/popular_products/PopularProducts";
 import HowTo from "../components/home/how_to/HowTo";
 import About from "../components/home/about/About";

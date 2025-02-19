@@ -22,12 +22,17 @@ const HeroContent = () => {
       </div>
 
       {/* iamge content */}
-      <div className="relative z-50 flex h-fit w-1/3 items-center justify-center pb-8">
-        <img
+      {/* <div className="relative z-50 flex h-fit w-1/3 items-center justify-center rounded-full bg-[url(../../../assets/hero/hero-rounded-bg.png)] pb-8"> */}
+      <div
+        className="relative z-50 flex w-1/3 items-center justify-center bg-contain bg-center bg-no-repeat pb-8"
+        style={{ backgroundImage: `url(${coffeeBg})` }}
+      >
+        {/* <img
           src={coffeeBg}
           alt=""
-          className="absolute top-1/2 left-1/2 z-0 -translate-x-1/2 -translate-y-1/2 transform max-xl:max-w-[95%]"
-        />
+          // className="absolute top-1/2 left-1/2 z-0 -translate-x-1/2 -translate-y-1/2 transform max-xl:max-w-[95%]"
+          className="absolute top-0 left-0 z-0 -translate-x-1/2 -translate-y-1/2 transform max-xl:max-w-[95%]"
+        /> */}
         <img
           src={coffeeImg}
           alt=""
