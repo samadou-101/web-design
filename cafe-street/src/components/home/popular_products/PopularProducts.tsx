@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCard from "./ProductCard";
+import firstProduct from "../../../assets/hero/coffee-1.png";
 
 const PopularProducts = () => {
   return (
@@ -8,8 +9,13 @@ const PopularProducts = () => {
         Popular <span className="decoration-primary pb-1 underline">Now</span>
       </h2>
 
-      <div className="bg-products relative flex h-52 w-full rounded-[50px]">
-        <ProductCard imgUrl="testurl" />
+      <div className="bg-products relative flex h-52 w-full justify-around rounded-[50px]">
+        <ProductCard
+          imgUrl={firstProduct}
+          productName={"Vanilla Late"}
+          hot={true}
+          reviewsNumber={10}
+        />
       </div>
     </div>
   );
