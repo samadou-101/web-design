@@ -2,10 +2,10 @@ import aboutImg from "../../../assets/about/about-coffee.png";
 const About = () => {
   return (
     <div className="bg-background mt-52 flex h-[50vh] w-full items-center justify-center gap-44 px-[5vw]">
-      <div className="relative -top-1/7 h-auto">
+      <div className="border-background relative -top-1/7 h-auto overflow-hidden rounded-2xl border-4 shadow-xl">
         <img src={aboutImg} alt="" />
       </div>
-      <div className="flex h-[75%] w-1/3 flex-col justify-between">
+      <div className="flex h-[75%] w-1/3 flex-col justify-between max-2xl:w-1/2">
         <h1 className="text-secondary text-4xl font-bold">
           About <span className="decoration-primary underline">us</span>
         </h1>
