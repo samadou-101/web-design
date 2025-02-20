@@ -3,6 +3,7 @@ import HowTo from "../components/home/how_to/HowTo";
 import About from "../components/home/about/About";
 import Menu from "../components/home/menu/Menu";
 import Hero from "../components/home/hero/Hero";
+import Testimonial from "../components/home/testimonial/Testimonial";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <HowTo />
       <About />
       <Menu />
+      <Testimonial />
     </div>
   );
 };
