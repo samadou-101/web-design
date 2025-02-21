@@ -33,4 +33,7 @@
   --color-review: #ffcb7c;
   --color-reviewBorder: #ffd390;
   --font-poppins: "Poppins", serif;
+
+  /* breakpoints */
+  --breakpoint-2md: 56rem;
 }

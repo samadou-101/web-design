@@ -9,7 +9,7 @@ import NewsLetter from "../components/home/newsletter/NewsLetter";
 const Home = () => {
   return (
     <div className="w-screen">
-      <div className="bg-background mb-36 flex h-auto flex-col gap-[17vh]">
+      <div className="bg-background mb-36 flex h-auto flex-col gap-[17vh] max-2xl:gap-[10vh] max-lg:gap-[13vh]">
         <Hero />
         <PopularProducts />
       </div>
