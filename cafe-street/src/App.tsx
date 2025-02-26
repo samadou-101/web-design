@@ -1,5 +1,4 @@
 import Home from "./pages/Home";
-import background_1 from "./assets/hero/bg_img_hero.png";
 
 function App() {
   return (
