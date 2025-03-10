@@ -1,14 +1,21 @@
 import Header from "./Header";
 import background from "@assets/hero/main-bg.png";
 import HeroText from "./HeroText";
+
 const Hero = () => {
   return (
-    <div className="2sm:space-y-4 3sm:space-y-3 relative flex h-auto flex-col space-y-2 sm:space-y-6 md:space-y-5 lg:space-y-8">
-      <div className="absolute top-0 left-0 -z-10 m-0 w-full p-0 md:-top-5 lg:-top-8 xl:-top-20">
-        <img src={background} alt="" className="w-full" />
+    <div className="relative min-h-screen w-full overflow-x-hidden">
+      <div className="absolute top-0 left-0 -z-10 w-full xl:-translate-y-[20rem]">
+        <img
+          src={background}
+          alt="Hero background"
+          className="max-h-full w-full max-lg:h-screen max-lg:object-cover lg:object-bottom"
+        />
       </div>
-      <Header />
-      <HeroText />
+      <div className="2sm:space-y-4 3sm:space-y-3 relative z-10 flex flex-col space-y-2 p-4 sm:space-y-6 md:space-y-5 lg:space-y-8">
+        <Header />
+        <HeroText />
+      </div>
     </div>
   );
 };
