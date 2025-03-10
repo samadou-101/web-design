@@ -131,4 +131,9 @@ img {
   --color-button: #0d1b39;
 
   --font-gilroy: "Gilroy", serif;
+
+  --breakpoint-2sm: 30rem;
+  --breakpoint-3sm: 25rem;
+  --breakpoint-4sm: 20rem;
+  --breakpoint-5sm: 15rem;
 }
