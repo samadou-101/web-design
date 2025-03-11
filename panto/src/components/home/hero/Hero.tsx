@@ -5,7 +5,7 @@ import HeroText from "./HeroText";
 const Hero = () => {
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden">
-      <div className="absolute top-0 left-0 -z-10 w-full xl:-translate-y-[20rem]">
+      <div className="5xl:-translate-y-[18rem] 3xl:-translate-y-[10rem] 4xl:-translate-y-[15rem] absolute top-0 left-0 -z-10 w-full xl:-translate-y-[5rem] 2xl:-translate-y-[12rem]">
         <img
           src={background}
           alt="Hero background"
