@@ -12,7 +12,7 @@ const Hero = () => {
           className="max-h-full w-full max-lg:h-screen max-lg:object-cover lg:object-bottom"
         />
       </div>
-      <div className="2sm:space-y-4 3sm:space-y-3 relative z-10 flex flex-col space-y-2 p-4 sm:space-y-6 md:space-y-5 lg:space-y-8">
+      <div className="2sm:space-y-4 3sm:space-y-3 relative z-10 flex min-h-full flex-col space-y-2 p-4 sm:space-y-6 md:space-y-5 lg:space-y-8">
         <Header />
         <HeroText />
       </div>
