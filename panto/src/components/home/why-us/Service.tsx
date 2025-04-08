@@ -6,7 +6,7 @@ interface IService {
 }
 const Service: FC<IService> = ({ title, content }) => {
   return (
-    <div className="flex flex-col gap-2 self-center">
+    <div className="flex flex-col gap-3 self-center">
       <h2 className="text-2xl font-bold">{title} </h2>
       <p className="">{content}</p>
       <div className="flex">
