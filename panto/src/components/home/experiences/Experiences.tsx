@@ -1,96 +1,27 @@
 import { HiArrowLongRight } from "react-icons/hi2";
-import expBg from "@assets/experiences/sofa.png";
+import EpxBg from "./EpxBg";
+
 const Experiences = () => {
   return (
-    <div className="mb-60 -ml-[5rem] flex gap-[30rem] pt-[10rem]">
+    <div className="mb-20 flex flex-col gap-8 px-4 pt-10 md:mb-60 md:gap-12 md:pt-[10rem] lg:flex-row lg:justify-between lg:gap-0 lg:px-0">
       {/* Background img */}
-      <div
-        style={{ position: "relative", width: "fit-content", margin: "2rem" }}
-      >
-        {/* Background squares */}
-        <div
-          style={{
-            position: "absolute",
-            top: "-20%",
-            left: "-24px",
-            height: "400px",
-            width: "495px",
-            borderRadius: "0.5rem",
-            backgroundColor: "#F7F7F7",
-            zIndex: 0,
-          }}
-        ></div>
-
-        <div
-          style={{
-            position: "absolute",
-            top: "50px",
-            right: "-54px",
-            height: "301px",
-            width: "495px",
-            borderRadius: "0.5rem",
-            backgroundColor: "#F7F7F7",
-            zIndex: 4,
-          }}
-        ></div>
-
-        {/* Base Image */}
-        <img
-          src={expBg}
-          alt="Background"
-          style={{
-            position: "relative",
-            width: "100%",
-            height: "auto",
-            borderRadius: "0.5rem",
-            zIndex: 2,
-          }}
-        />
-
-        {/* Blur Overlay */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            height: "130%",
-            width: "105%",
-            borderRadius: "0.5rem",
-            backgroundColor: "rgba(255, 255, 255, 0.5)",
-            backdropFilter: "blur(8px)",
-            zIndex: 3,
-          }}
-        ></div>
-
-        {/* Top Image */}
-        <img
-          src={expBg}
-          alt="Overlayed Image"
-          style={{
-            position: "absolute",
-            top: "-20px",
-            left: 0,
-            width: "100%",
-            height: "auto",
-            borderRadius: "0.5rem",
-            zIndex: 5,
-          }}
-        />
+      <div className="w-full lg:w-auto">
+        <EpxBg />
       </div>
-
       {/* Content */}
-      <div className="flex w-1/4 flex-col gap-5">
-        <span className="text-coragne text-lg font-semibold">Experiences</span>
-        <h2 className="text-text text-4xl font-bold">
+      <div className="flex w-full flex-col gap-5 lg:w-1/3 xl:w-1/4">
+        <span className="text-corange text-lg font-semibold">Experiences</span>
+        <h2 className="text-text text-2xl font-bold md:text-4xl">
           We Provide You The Best Experience
         </h2>
-        <p className="text-gray text-lg">
+        <p className="text-gray text-base md:text-lg">
           You don’t have to worry about the result because all of these
           interiors are made by people who are professionals in their fields
-          with an elegant and lucurious style and with premium quality materials
+          with an elegant and luxurious style and with premium quality materials
         </p>
         <div className="flex items-center gap-2">
-          <span className="text-coragne text-base">More Info</span>
-          <span className="text-coragne text-sm">
+          <span className="text Juli-corange text-base">More Info</span>
+          <span className="text-corange text-sm">
             <HiArrowLongRight size={25} />
           </span>
         </div>
