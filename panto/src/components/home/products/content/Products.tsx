@@ -112,14 +112,14 @@ const Products = () => {
 
       <button
         onClick={scrollLeft}
-        className="absolute top-1/2 left-0 -translate-y-1/2 rounded-full bg-gray-800 p-2 text-white opacity-75 transition-opacity hover:opacity-100"
+        className="absolute top-1/3 left-0 -translate-y-1/2 rounded-full bg-gray-800 p-2 text-white opacity-75 transition-opacity hover:opacity-100"
       >
         <FaArrowLeft />
       </button>
 
       <button
         onClick={scrollRight}
-        className="absolute top-1/2 right-0 -translate-y-1/2 rounded-full bg-gray-800 p-2 text-white opacity-75 transition-opacity hover:opacity-100"
+        className="absolute top-1/3 right-0 -translate-y-1/2 rounded-full bg-gray-800 p-2 text-white opacity-75 transition-opacity hover:opacity-100"
       >
         <FaArrowRight />
       </button>

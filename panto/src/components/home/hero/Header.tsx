@@ -3,7 +3,7 @@ import { RiMenuFill } from "react-icons/ri";
 
 const Header = () => {
   return (
-    <div className="z-50 flex items-center justify-between px-5 pt-2">
+    <div className="sticky z-50 flex items-center justify-between px-5 pt-2">
       <h1 className="font-gilory text-base text-white sm:text-2xl md:text-3xl">
         Panto
       </h1>
