@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+html {
+  @apply overflow-x-hidden;
+}
 body {
   @apply font-gilroy m-0 box-border overflow-x-hidden p-0;
 }
