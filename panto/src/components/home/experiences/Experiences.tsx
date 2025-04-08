@@ -2,22 +2,78 @@ import { HiArrowLongRight } from "react-icons/hi2";
 import expBg from "@assets/experiences/sofa.png";
 const Experiences = () => {
   return (
-    <div className="mb-60 flex justify-around">
+    <div className="mb-60 -ml-[5rem] flex gap-[30rem] pt-[10rem]">
       {/* Background img */}
-      <div className="relative w-fit">
+      <div
+        style={{ position: "relative", width: "fit-content", margin: "2rem" }}
+      >
+        {/* Background squares */}
+        <div
+          style={{
+            position: "absolute",
+            top: "-20%",
+            left: "-24px",
+            height: "400px",
+            width: "495px",
+            borderRadius: "0.5rem",
+            backgroundColor: "#F7F7F7",
+            zIndex: 0,
+          }}
+        ></div>
+
+        <div
+          style={{
+            position: "absolute",
+            top: "50px",
+            right: "-54px",
+            height: "301px",
+            width: "495px",
+            borderRadius: "0.5rem",
+            backgroundColor: "#F7F7F7",
+            zIndex: 4,
+          }}
+        ></div>
+
         {/* Base Image */}
         <img
           src={expBg}
           alt="Background"
-          className="h-auto w-full rounded-lg"
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "auto",
+            borderRadius: "0.5rem",
+            zIndex: 2,
+          }}
         />
-        {/* Overlay */}
-        <div className="absolute inset-0 h-[130%] w-[120%] rounded-lg bg-white/50 backdrop-blur-sm"></div>
+
+        {/* Blur Overlay */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            height: "130%",
+            width: "105%",
+            borderRadius: "0.5rem",
+            backgroundColor: "rgba(255, 255, 255, 0.5)",
+            backdropFilter: "blur(8px)",
+            zIndex: 3,
+          }}
+        ></div>
+
         {/* Top Image */}
         <img
           src={expBg}
           alt="Overlayed Image"
-          className="absolute inset-0 -top-5 h-auto w-full rounded-lg"
+          style={{
+            position: "absolute",
+            top: "-20px",
+            left: 0,
+            width: "100%",
+            height: "auto",
+            borderRadius: "0.5rem",
+            zIndex: 5,
+          }}
         />
       </div>
 
