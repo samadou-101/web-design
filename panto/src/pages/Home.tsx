@@ -1,4 +1,5 @@
 import Experiences from "@components/home/experiences/Experiences";
+import Footer from "@components/home/footer/Footer";
 import Hero from "@components/home/hero/Hero";
 import Materials from "@components/home/materials/Materials";
 import SellingProducts from "@components/home/products/SellingProducts";
@@ -14,6 +15,7 @@ const Home = () => {
       <Experiences />
       <Materials />
       <Testimonials />
+      <Footer />
     </div>
   );
 };
