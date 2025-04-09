@@ -1,10 +1,26 @@
 import { FaFacebookF, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  // Animation variants for the container
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
-    <footer className="bg-gray-100 px-4 py-8 sm:px-6 lg:px-8">
+    <motion.footer
+      className="bg-gray-100 px-4 py-8 sm:px-6 lg:px-8"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }} // Trigger when 20% of the footer is in view
+    >
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {/* Panto Section */}
         <div>
@@ -85,7 +101,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 
