@@ -5,7 +5,7 @@ const EpxBg = () => {
     <div className="relative m-8 w-fit max-md:min-w-[350px] md:m-2">
       {/* Background squares */}
       <div className="absolute -top-[20%] -left-6 z-0 hidden h-[400px] w-[495px] rounded-lg bg-[#F7F7F7] md:block"></div>
-      <div className="absolute top-[50px] -right-[54px] z-4 hidden h-[301px] w-[495px] rounded-lg bg-[#F7F7F7] md:block"></div>
+      <div className="absolute -right-[54px] z-4 hidden h-[301px] w-[495px] rounded-lg bg-[#F7F7F7] md:block xl:top-[50px]"></div>
 
       {/* Base Image */}
       <img
