@@ -10,7 +10,7 @@ const Hero = () => {
 
       {/* Background Image Container */}
       <div
-        className="5xl:bg-[position:0%_68%] absolute top-0 -left-[1.8px] -z-10 h-full w-full bg-cover bg-bottom bg-no-repeat max-lg:bg-center"
+        className="5xl:bg-[center_60%] absolute top-0 left-0 -z-10 h-full w-full bg-cover bg-[center_bottom] bg-no-repeat sm:bg-[center_70%] lg:bg-[center_60%] xl:bg-[center_50%]"
         style={{ backgroundImage: `url(${background})` }}
       ></div>
 
