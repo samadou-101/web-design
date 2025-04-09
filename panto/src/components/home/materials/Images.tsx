@@ -4,8 +4,8 @@ import table_chairs from "@assets/materials/table-chairs.png";
 
 const Images = () => {
   return (
-    <div className="relative -mr-40 flex items-end gap-8">
-      <div className="flex flex-col gap-6">
+    <div className="relative -mr-40 flex items-end gap-8 max-xl:-mr-44 max-md:min-w-1/3">
+      <div className="flex flex-col gap-6 max-md:min-h-full max-md:min-w-1/3 max-md:gap-2">
         <div className="rounded-4xl shadow-xl">
           <img src={chairs} alt="" />
         </div>
@@ -22,7 +22,7 @@ const Images = () => {
         <img
           src={table_chairs}
           alt="Background"
-          className="relative -right-8 z-2 h-auto w-full rounded-lg"
+          className="relative -right-8 z-2 h-auto max-w-full rounded-lg"
         />
 
         {/* Blur Overlay */}

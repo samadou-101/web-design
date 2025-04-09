@@ -4,11 +4,8 @@ import Images from "./Images";
 
 const Materials = () => {
   return (
-    <div className="mt-52 mb-50 flex items-center justify-between">
+    <div className="mt-48 mb-48 flex flex-col-reverse items-center gap-18 lg:flex-row lg:justify-between">
       <Content />
-      {/* <img src={chairs} alt="" />
-      <img src={half_sofa} alt="" /> */}
-      {/* <img src={table_chairs} alt="" /> */}
       <Images />
     </div>
   );
