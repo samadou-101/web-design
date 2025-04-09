@@ -4,7 +4,7 @@ import Images from "./Images";
 
 const Materials = () => {
   return (
-    <div className="mt-48 mb-48 flex flex-col-reverse items-center gap-18 lg:flex-row lg:justify-between">
+    <div className="mt-48 mb-48 flex flex-col-reverse items-center gap-18 max-md:mt-32 lg:flex-row lg:justify-between">
       <Content />
       <Images />
     </div>

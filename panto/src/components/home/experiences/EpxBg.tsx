@@ -15,7 +15,7 @@ const EpxBg = () => {
       />
 
       {/* Blur Overlay */}
-      <div className="absolute inset-0 z-3 h-[108%] w-[105%] rounded-lg bg-white/40 backdrop-blur-lg"></div>
+      <div className="absolute inset-0 z-3 h-[108%] w-[105%] rounded-lg bg-white/40 backdrop-blur-lg max-md:h-[118%]"></div>
 
       {/* Top Image */}
       <img

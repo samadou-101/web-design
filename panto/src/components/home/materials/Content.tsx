@@ -2,7 +2,7 @@ import { HiArrowLongRight } from "react-icons/hi2";
 
 const Content = () => {
   return (
-    <div className="my-auto ml-20 flex h-full w-[85%] flex-col justify-center gap-5 self-start lg:ml-14 lg:w-1/2 xl:ml-20 xl:w-1/3 2xl:ml-24">
+    <div className="my-auto ml-20 flex h-full w-[85%] flex-col justify-center gap-5 self-start max-md:ml-8 lg:ml-14 lg:w-1/2 xl:ml-20 xl:w-1/3 2xl:ml-24">
       <span className="text-coragne text-lg font-semibold tracking-wide">
         Materials
       </span>

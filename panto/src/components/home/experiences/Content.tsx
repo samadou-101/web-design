@@ -2,7 +2,7 @@ import { HiArrowLongRight } from "react-icons/hi2";
 
 const Content = () => {
   return (
-    <div className="ml-28 flex w-[85%] flex-col gap-5 lg:w-1/2 xl:w-1/3">
+    <div className="ml-28 flex w-[85%] flex-col gap-5 max-md:ml-16 lg:w-1/2 xl:w-1/3">
       <span className="text-coragne text-lg font-semibold">Experiences</span>
       <h2 className="text-text text-2xl font-bold md:text-4xl">
         We Provide You The Best Experience
