@@ -10,11 +10,10 @@ interface ICard {
 
 const Card: FC<ICard> = ({ img, category, title, rating, price }) => {
   return (
-    <div className="flex h-[31rem] w-[10.5rem] flex-col rounded-[1.25rem] bg-white sm:h-[31rem] sm:w-[16.5rem] md:h-[31rem] lg:h-[31rem]">
+    <div className="flex h-[33rem] w-[10.5rem] flex-col rounded-[1.25rem] bg-white pb-6 sm:w-[16.5rem]">
       {/* // <div className="flex w-full max-w-[14rem] flex-col rounded-xl bg-white sm:h-[31rem] sm:max-w-[16.5rem] md:h-[31rem] lg:h-[31rem]"> */}
-      <div className="bg-selling flex items-center justify-center">
-        <img src={img} alt="" />
-        {/* <img src={chair} alt="" /> */}
+      <div className="bg-selling flex h-[400px] items-center justify-center">
+        <img src={img} alt="" className="max-h-full" />
       </div>
 
       <div className="mt-12 bg-white px-5">
