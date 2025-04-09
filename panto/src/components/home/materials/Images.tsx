@@ -16,7 +16,7 @@ const Images = () => {
 
       <div className="relative m-8 max-md:min-h-full max-md:min-w-[45%] md:m-2">
         {/* Background square */}
-        <div className="absolute -top-[20%] right-6 z-4 hidden h-[400px] w-[395px] rounded-lg bg-[#F7F7F7] md:block"></div>
+        <div className="absolute -top-[20%] right-6 z-4 hidden h-[300px] w-[395px] rounded-lg bg-[#F7F7F7] md:block xl:h-[400px]"></div>
 
         {/* Base Image */}
         <img
