@@ -8,7 +8,7 @@ interface ReviewProps {
 }
 const Review = ({ name, review, image, rating }: ReviewProps) => {
   return (
-    <div className="relative h-[400px] w-[300px] flex-shrink-0 overflow-hidden rounded-2xl shadow-lg">
+    <div className="relative h-[400px] w-[250px] flex-shrink-0 overflow-hidden rounded-2xl shadow-lg sm:w-[280px] md:w-[300px]">
       {/* Background Image */}
       <div className="h-full w-full">
         <img

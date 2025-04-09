@@ -28,8 +28,7 @@ const reviews = [
 
 const Reviews = () => {
   return (
-    // <div className="w-full overflow-x-auto py-4">
-    <div className="inline-flex gap-4 px-4">
+    <div className="flex flex-col items-center gap-4 px-4 sm:flex-row sm:flex-wrap sm:justify-center">
       {reviews.map((review, index) => (
         <Review
           key={index}
@@ -40,7 +39,6 @@ const Reviews = () => {
         />
       ))}
     </div>
-    // </div>
   );
 };
 
