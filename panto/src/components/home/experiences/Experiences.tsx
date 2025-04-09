@@ -18,7 +18,7 @@ const Experiences = () => {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.7 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       <div className="w-full lg:w-auto">
         <EpxBg />
