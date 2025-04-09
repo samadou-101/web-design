@@ -1,15 +1,23 @@
 import { CiSearch } from "react-icons/ci";
+import { motion } from "framer-motion";
 
-const HeroText = () => {
+const HeroText = ({ scrolled }: { scrolled: boolean }) => {
   return (
-    <div className="mt-20 flex w-full flex-col items-center gap-6 md:mt-10 lg:mt-0">
+    <motion.div
+      className="flex w-full flex-col items-center gap-6 lg:mt-0"
+      initial={{ marginTop: "1.25rem" }} // mt-5 (1.25rem = 20px)
+      animate={{
+        marginTop: scrolled ? "6rem" : "1.25rem", // mt-24 (6rem = 96px) or mt-5
+      }}
+      transition={{ duration: 0.5, ease: "easeInOut" }} // Smooth transition
+    >
       {/* Headline */}
-      <h1 className="w-full max-w-[90%] text-center text-3xl leading-tight font-semibold text-white sm:max-w-[80%] sm:text-[clamp(2rem,5vw,4.5rem)] lg:max-w-[60%]">
+      <h1 className="w-full max-w-[90%] text-center text-[2rem] leading-tight font-semibold text-white sm:max-w-[80%] sm:text-[clamp(2rem,5vw,4.5rem)] lg:max-w-[60%]">
         Make Your Interior More Minimalistic & Modern
       </h1>
 
       {/* Subtitle */}
-      <p className="w-full max-w-[90%] text-center text-base leading-relaxed font-light text-white/80 sm:max-w-[60%] sm:text-[clamp(1rem,2vw,1.25rem)]">
+      <p className="w-full max-w-[90%] text-center text-[1rem] leading-relaxed font-light text-white/80 sm:max-w-[60%] sm:text-[clamp(1rem,2vw,1.25rem)]">
         Turn your room with Panto into a lot more minimalist and modern with
         ease and speed.
       </p>
@@ -25,7 +33,7 @@ const HeroText = () => {
           <CiSearch size={18} className="text-white" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

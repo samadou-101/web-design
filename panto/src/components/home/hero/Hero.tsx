@@ -1,8 +1,24 @@
 import Header from "./Header";
 import background from "@assets/hero/main-bg.png";
 import HeroText from "./HeroText";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="relative h-fit min-h-screen w-full overflow-hidden">
       {/* Header */}
@@ -16,7 +32,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 flex min-h-full flex-col space-y-2 p-4 pt-14 sm:space-y-6 sm:pt-16 md:space-y-5 md:pt-20 lg:space-y-8">
-        <HeroText />
+        <HeroText scrolled={scrolled} />
       </div>
     </div>
   );
