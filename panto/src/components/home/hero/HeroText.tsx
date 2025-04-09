@@ -1,15 +1,32 @@
 import { CiSearch } from "react-icons/ci";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const HeroText = ({ scrolled }: { scrolled: boolean }) => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 640);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const animationProps = isSmallScreen
+    ? {
+        initial: { marginTop: "1.25rem" },
+        animate: { marginTop: scrolled ? "6rem" : "1.25rem" },
+        transition: { duration: 0.5, ease: "easeInOut" },
+      }
+    : {};
+
   return (
     <motion.div
       className="flex w-full flex-col items-center gap-6 lg:mt-0"
-      initial={{ marginTop: "1.25rem" }}
-      animate={{
-        marginTop: scrolled ? "6rem" : "1.25rem",
-      }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+      {...animationProps}
     >
       {/* Headline */}
       <h1 className="w-full max-w-[90%] text-center text-[2rem] leading-tight font-semibold text-white sm:max-w-[80%] sm:text-[clamp(2rem,5vw,4.5rem)] lg:max-w-[60%]">

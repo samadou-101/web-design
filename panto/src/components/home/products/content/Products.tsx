@@ -1,7 +1,70 @@
 import { useRef } from "react";
 import chair from "@assets/best-selling/chair-1.png";
+import chair2 from "@assets/best-selling/chair-2.png";
+import chair3 from "@assets/best-selling/chair-3.png";
+import chair4 from "@assets/best-selling/chair-4.png";
 import Card from "./Card";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
+// Array of product data
+const productsData = [
+  {
+    img: chair,
+    category: "chair",
+    title: "Sakarias Armchair",
+    rating: 5,
+    price: 392,
+  },
+  {
+    img: chair2,
+    category: "chair",
+    title: "Sakarias Armchair",
+    rating: 5,
+    price: 392,
+  },
+  {
+    img: chair3,
+    category: "chair",
+    title: "Sakarias Armchair",
+    rating: 5,
+    price: 392,
+  },
+  {
+    img: chair4,
+    category: "chair",
+    title: "Sakarias Armchair",
+    rating: 5,
+    price: 392,
+  },
+  {
+    img: chair,
+    category: "chair",
+    title: "Sakarias Armchair",
+    rating: 5,
+    price: 392,
+  },
+  {
+    img: chair2,
+    category: "chair",
+    title: "Sakarias Armchair",
+    rating: 5,
+    price: 392,
+  },
+  {
+    img: chair3,
+    category: "chair",
+    title: "Sakarias Armchair",
+    rating: 5,
+    price: 392,
+  },
+  {
+    img: chair4,
+    category: "chair",
+    title: "Sakarias Armchair",
+    rating: 5,
+    price: 392,
+  },
+];
 
 const Products = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -20,7 +83,6 @@ const Products = () => {
     <div className="relative mt-6">
       <div
         ref={scrollRef}
-        // className="scrollbar-hide flex w-[20rem] gap-4 overflow-x-auto scroll-smooth p-4"
         className="scrollbar-hide flex w-[20rem] gap-4 overflow-x-auto scroll-smooth p-4 sm:w-[38rem] md:w-[46rem] lg:w-[64rem] xl:w-[73rem]"
         style={{
           scrollbarWidth: "none", // Firefox
@@ -28,85 +90,19 @@ const Products = () => {
           WebkitOverflowScrolling: "touch",
         }}
       >
-        {/* Container with width constraints based on viewport */}
+        {/* Container with width constraints */}
         <div className="flex w-max gap-4">
-          {/* First visible group - width constraint by parent div */}
-          <div className="flex gap-4 sm:w-auto">
-            <div className="w-full snap-start sm:w-auto">
+          {productsData.map((product, index) => (
+            <div key={index} className="w-full snap-start sm:w-auto">
               <Card
-                img={chair}
-                category="chair"
-                title="Sakarias Armchair"
-                rating={5}
-                price={392}
+                img={product.img}
+                category={product.category}
+                title={product.title}
+                rating={product.rating}
+                price={product.price}
               />
             </div>
-            <div className="w-full snap-start sm:w-auto">
-              <Card
-                img={chair}
-                category="chair"
-                title="Sakarias Armchair"
-                rating={5}
-                price={392}
-              />
-            </div>
-          </div>
-
-          {/* Additional cards */}
-          <div className="w-full snap-start sm:w-auto">
-            <Card
-              img={chair}
-              category="chair"
-              title="Sakarias Armchair"
-              rating={5}
-              price={392}
-            />
-          </div>
-          <div className="w-full snap-start sm:w-auto">
-            <Card
-              img={chair}
-              category="chair"
-              title="Sakarias Armchair"
-              rating={5}
-              price={392}
-            />
-          </div>
-          <div className="w-full snap-start sm:w-auto">
-            <Card
-              img={chair}
-              category="chair"
-              title="Sakarias Armchair"
-              rating={5}
-              price={392}
-            />
-          </div>
-          <div className="w-full snap-start sm:w-auto">
-            <Card
-              img={chair}
-              category="chair"
-              title="Sakarias Armchair"
-              rating={5}
-              price={392}
-            />
-          </div>
-          <div className="w-full snap-start sm:w-auto">
-            <Card
-              img={chair}
-              category="chair"
-              title="Sakarias Armchair"
-              rating={5}
-              price={392}
-            />
-          </div>
-          <div className="w-full snap-start sm:w-auto">
-            <Card
-              img={chair}
-              category="chair"
-              title="Sakarias Armchair"
-              rating={5}
-              price={392}
-            />
-          </div>
+          ))}
         </div>
       </div>
 
