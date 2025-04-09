@@ -137,6 +137,8 @@ img {
   --color-card: #fafafa;
   --color-dark: #0d1b39;
   --color-filter: #eeeeee;
+  /* --color-header: #1c2526; */
+  --color-header: #222427;
 
   --font-gilroy: "Gilroy", serif;
 
