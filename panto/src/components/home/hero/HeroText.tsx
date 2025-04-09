@@ -5,11 +5,11 @@ const HeroText = ({ scrolled }: { scrolled: boolean }) => {
   return (
     <motion.div
       className="flex w-full flex-col items-center gap-6 lg:mt-0"
-      initial={{ marginTop: "1.25rem" }} // mt-5 (1.25rem = 20px)
+      initial={{ marginTop: "1.25rem" }}
       animate={{
-        marginTop: scrolled ? "6rem" : "1.25rem", // mt-24 (6rem = 96px) or mt-5
+        marginTop: scrolled ? "6rem" : "1.25rem",
       }}
-      transition={{ duration: 0.5, ease: "easeInOut" }} // Smooth transition
+      transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       {/* Headline */}
       <h1 className="w-full max-w-[90%] text-center text-[2rem] leading-tight font-semibold text-white sm:max-w-[80%] sm:text-[clamp(2rem,5vw,4.5rem)] lg:max-w-[60%]">
