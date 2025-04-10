@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../header/Header";
 import HeroContent from "./HeroContent";
 import background_1 from "../../../assets/hero/bg_img_hero.png";
