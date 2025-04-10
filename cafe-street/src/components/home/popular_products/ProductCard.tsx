@@ -15,7 +15,7 @@ const ProductCard: FC<IProductCard> = ({
   hot,
 }) => {
   return (
-    <div className="bg-glass border-background max-2md:min-w-[220px] max-2md:h-[140%] max-2md:-top-[60%] relative -top-[90%] z-50 flex h-[170%] w-1/5 min-w-xs items-center justify-center rounded-2xl border-4 shadow-md max-2xl:min-w-2xs max-lg:-top-[70%] max-lg:h-[150%] max-lg:min-w-3xs max-md:-top-[40%] max-md:h-[120%] max-md:min-w-[180px]">
+    <div className="bg-glass border-background max-2md:min-w-[220px] max-2md:h-[140%] max-2md:-top-[60%] relative -top-[90%] z-50 flex h-[170%] w-1/5 min-w-xs items-center justify-center rounded-2xl border-4 shadow-md max-2xl:min-w-2xs max-lg:-top-[70%] max-lg:h-[150%] max-lg:min-w-3xs max-md:-top-[40%] max-md:h-[120%] max-md:min-w-[180px] max-sm:top-0 max-sm:h-[250px]">
       <div className="max-2md:space-y-4 flex h-[90%] w-[90%] flex-col justify-between max-lg:h-fit max-lg:justify-start max-lg:space-y-5">
         <div className="flex w-full flex-col items-center justify-around overflow-hidden rounded-2xl">
           <img src={imgUrl} alt="" className="max-w-full rounded-2xl" />
