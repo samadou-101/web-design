@@ -9,7 +9,7 @@ import waffleIceCream from "../../../assets/menu/waffle-ice-cream.png";
 const Menu = () => {
   return (
     <div className="mt-16 flex flex-col gap-12 px-4 sm:mt-24 sm:gap-16 md:mt-32 md:gap-20 md:px-[5vw]">
-      <h1 className="text-secondary text-2xl font-bold tracking-wide sm:text-3xl md:text-4xl">
+      <h1 className="text-secondary text-3xl font-bold tracking-wide sm:text-4xl md:text-5xl">
         Special menu{" "}
         <span className="decoration-primary border-primary border-b-4">
           for you
