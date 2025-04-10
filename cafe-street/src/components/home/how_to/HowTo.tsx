@@ -5,13 +5,13 @@ import thirdService from "../../../assets/how_to/coffee-cup 2.png";
 
 const HowTo = () => {
   return (
-    <div className="bg-glass mt-28 w-full px-[5vw]">
-      <div className="flex w-full flex-col gap-28">
-        <p className="text-secondary text-3xl font-bold tracking-wider">
+    <div className="bg-glass mt-28 w-full px-4 sm:px-6 md:px-[5vw]">
+      <div className="flex w-full flex-col gap-12 sm:gap-16 md:gap-28">
+        <h2 className="text-secondary text-3xl font-bold tracking-wider sm:text-3xl md:text-4xl lg:text-5xl">
           How to use delivery{" "}
           <span className="decoration-primary underline">services</span>
-        </p>
-        <div className="grid w-full grid-cols-3 self-center">
+        </h2>
+        <div className="grid w-full grid-cols-1 gap-8 self-center sm:grid-cols-2 md:grid-cols-3 md:gap-6">
           <HowToCard
             imgUrl={firstService}
             title="choose your coffee"
