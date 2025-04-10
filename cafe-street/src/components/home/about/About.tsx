@@ -1,7 +1,7 @@
 import aboutImg from "../../../assets/about/about-coffee.png";
 const About = () => {
   return (
-    <div className="bg-background max- mt-52 flex h-[50vh] w-full items-center justify-center gap-40 px-[5vw] max-lg:gap-22 max-md:h-[35vh] max-md:gap-10 max-sm:h-[28vh] max-sm:justify-start max-sm:gap-4">
+    <div className="bg-background max- mt-52 flex h-[50vh] w-full items-center justify-center gap-40 px-[5vw] max-lg:gap-22 max-md:h-[35vh] max-md:gap-10 max-sm:h-fit max-sm:justify-start max-sm:gap-4 max-sm:py-4">
       <div className="border-background relative -top-1/7 h-auto overflow-hidden rounded-2xl border-4 shadow-xl max-md:w-[200px] max-sm:-top-0 max-sm:w-[130px]">
         <img src={aboutImg} alt="" />
       </div>
