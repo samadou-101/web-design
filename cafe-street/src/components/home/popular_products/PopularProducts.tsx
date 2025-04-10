@@ -6,7 +6,7 @@ import background_2 from "../../../assets/hero/bg-2.png";
 
 const PopularProducts = () => {
   return (
-    <div className="bg-[linear-gradient(to_bottom,theme(colors.background)_70%,theme(colors.glass)_30%)] relative flex h-auto w-full flex-col gap-y-[25vh] px-[5vw]">
+    <div className="bg-[linear-gradient(to_bottom,theme(colors.background)_70%,theme(colors.glass)_30%)] relative flex h-auto w-full flex-col gap-y-[25vh] px-[5vw] max-md:gap-y-28">
       <div className="absolute -top-[4.5vw] left-[2vw] z-10 h-auto w-1/3 min-w-[300px] max-md:w-1/3 max-sm:min-w-[250px]">
         <img className="max- max-w-full opacity-90" src={background_2} alt="" />
       </div>
