@@ -1,5 +1,4 @@
 import style from "../styles/home-apartment.module.css";
-import apartmentBackground from "../../../assets/apartment-background.png";
 import yellowWave from "../../../assets/yellow-wave.png";
 const Best_Apartment = () => {
   return (
