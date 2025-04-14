@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Miracle";
-  src: url("/public/fonts//Miracle.otf") format("opentype");
+  src: url("/fonts//Miracle.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Helvetica";
-  src: url("/public/fonts//Helvetica.ttf") format("truetype");
+  src: url("/fonts//Helvetica.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
