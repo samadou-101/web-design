@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Montserrat, Nunito } from "next/font/google";
+import Image from "next/image";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -10,8 +11,10 @@ const nunito = Nunito({ subsets: ["latin"], weight: ["700"] });
 export default function LandingPage() {
   return (
     <div
-      className={`${montserrat.className} min-h-screen bg-neutral-100 overflow-x-hidden`}
+      className={`${montserrat.className} min-h-screen bg-neutral-100 overflow-x-hidden relative`}
     >
+      <div className="absolute inset-0 bg-[#d9d9d9] opacity-20 mix-blend-screen z-0" />
+
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -46,130 +49,139 @@ export default function LandingPage() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-12">
-        <div className="absolute inset-0 bg-[#d9d9d9] opacity-20 mix-blend-screen" />
-        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6">
-            <p className="text-[#333333] text-base">On Sale Now</p>
-            <h1 className="text-[#405b6f] text-4xl md:text-6xl font-semibold uppercase">
-              Electric Scooter
-            </h1>
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2">
-                <div className="w-6 h-6 bg-[#405b6f]" />
-                <span className="text-[#333333] text-sm capitalize">
-                  Wireless Bike
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-6 bg-[#212121] border border-[#405b6f]" />
-                <span className="text-[#333333] text-sm capitalize">
-                  Smart Lock
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-5 h-5 bg-[#405b6f]" />
-                <span className="text-[#333333] text-sm capitalize">
-                  Location GPS
-                </span>
-              </div>
-            </div>
-            <button className="bg-[#de7734] text-white px-6 py-3 rounded-full uppercase text-sm font-medium border border-[#333333] hover:bg-[#c5682d] transition">
-              Add to Cart
-            </button>
-          </div>
-          <div className="relative">
-            <img
-              src="https://placehold.co/795x876"
-              alt="Electric Scooter"
-              className="w-full max-w-[500px] mx-auto"
-            />
-            <div className="absolute top-4 right-4 text-right">
-              <p className="text-[#de7734] text-3xl md:text-5xl font-semibold">
-                $1699.00
-              </p>
-              <p className="text-[#333333] text-sm mt-2">
-                Lorem ipsum <span className="font-semibold">15% off</span>,
-                consectetur adipiscing elit.{" "}
-                <span className="font-semibold">Shipping</span> ullamcorper
-                convallis fermentum.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-          <div className="relative">
-            <div className="w-64 h-64 bg-[#de7734] rounded-full absolute top-0 left-0 outline outline-[3px] outline-offset-[-1.5px]" />
-            <div className="w-32 h-32 rounded-full outline outline-[3px] outline-offset-[-1.5px] outline-[#de7734] absolute bottom-0 right-0" />
-            <div className="w-[600px] h-[500px] bg-[#d9d9d9] rounded-tl-full shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]" />
-            <img
-              src="https://placehold.co/1269x846"
-              alt="About"
-              className="absolute w-full max-w-[800px] top-0 left-[-100px]"
-            />
-          </div>
-          <div className="space-y-6">
-            <p className="text-[#333333] text-base">About Us</p>
-            <h2 className="text-[#405b6f] text-4xl font-semibold capitalize leading-tight">
-              We created the most advanced Scooter technology
-            </h2>
-            <p className="text-[#333333] text-base max-w-md">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum ullamcorper convallis fermentum.
-            </p>
-            <div className="flex gap-4">
-              <div className="w-12 h-12 rounded-full border border-[#cecece]" />
-              <div className="w-4 h-4 bg-[#de7734] rounded-full border" />
-            </div>
-            <p className="text-[#405b6f] text-base font-semibold capitalize">
-              View More
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Values Section */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6">
-            <p className="text-[#333333] text-base">Our Core Value</p>
-            <h2 className="text-[#405b6f] text-4xl font-semibold capitalize leading-tight">
-              Less Noise Pollution, Moving Around Swiftly
-            </h2>
-            <p className="text-[#333333] text-base max-w-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum ullamcorper convallis fermentum.
-            </p>
-            <div className="space-y-2">
-              {[...Array(4)].map((_, i) => (
-                <div key={i} className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-[#de7734] rounded-full" />
-                  <p className="text-[#333333] text-base">
-                    Lorem ipsum dolor sit amet.
-                  </p>
+      <div className="relative">
+        <Image
+          src="/hero-background.png"
+          alt="Background"
+          fill
+          className="absolute inset-0 object-cover object-top w-full h-full z-0 sm:object-contain lg:object-cover"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+          priority
+        />
+        {/* Hero Section */}
+        <section className="relative pt-24 pb-80">
+          <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center relative z-10">
+            <div className="space-y-6">
+              <p className="text-[#333333] text-base">On Sale Now</p>
+              <h1 className="text-[#405b6f] text-4xl md:text-6xl font-semibold uppercase">
+                Electric Scooter
+              </h1>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 bg-[#405b6f]" />
+                  <span className="text-[#333333] text-sm capitalize">
+                    Wireless Bike
+                  </span>
                 </div>
-              ))}
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-6 bg-[#212121] border border-[#405b6f]" />
+                  <span className="text-[#333333] text-sm capitalize">
+                    Smart Lock
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-5 h-5 bg-[#405b6f]" />
+                  <span className="text-[#333333] text-sm capitalize">
+                    Location GPS
+                  </span>
+                </div>
+              </div>
+              <button className="bg-[#de7734] text-white px-6 py-3 rounded-full uppercase text-sm font-medium border border-[#333333] hover:bg-[#c5682d] transition">
+                Add to Cart
+              </button>
             </div>
-            <div className="flex gap-4">
-              <div className="w-12 h-12 rounded-full border border-[#cecece]" />
-              <div className="w-4 h-4 bg-[#de7734] rounded-full border" />
+            <div className="relative">
+              <img
+                src="https://placehold.co/795x876"
+                alt="Electric Scooter"
+                className="w-full max-w-[500px] mx-auto"
+              />
+              <div className="absolute top-4 right-4 text-right">
+                <p className="text-[#de7734] text-3xl md:text-5xl font-semibold">
+                  $1699.00
+                </p>
+                <p className="text-[#333333] text-sm mt-2">
+                  Lorem ipsum <span className="font-semibold">15% off</span>,
+                  consectetur adipiscing elit.{" "}
+                  <span className="font-semibold">Shipping</span> ullamcorper
+                  convallis fermentum.
+                </p>
+              </div>
             </div>
-            <p className="text-[#405b6f] text-base font-semibold capitalize">
-              View More
-            </p>
           </div>
-          <div className="relative">
-            <div className="w-64 h-64 bg-[#de7734] rounded-full absolute top-0 right-0 outline outline-[3px] outline-offset-[-1.5px]" />
-            <div className="w-32 h-32 rounded-full outline outline-[3px] outline-offset-[-1.5px] outline-[#de7734] absolute bottom-0 left-0" />
-            <div className="w-[600px] h-[500px] bg-[#d9d9d9] rounded-tl-full shadow-[-10px_10px_20px_rgba(0,0,0,0.25)] absolute right-0" />
+        </section>
+
+        {/* About Section */}
+        <section className="py-12 relative bg-white z-10">
+          <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+            <div className="relative">
+              <div className="w-64 h-64 bg-[#de7734] rounded-full absolute top-0 left-0 outline outline-[3px] outline-offset-[-1.5px]" />
+              <div className="w-32 h-32 rounded-full outline outline-[3px] outline-offset-[-1.5px] outline-[#de7734] absolute bottom-0 right-0" />
+              <div className="w-[600px] h-[500px] bg-[#d9d9d9] rounded-tl-full shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]" />
+              <img
+                src="https://placehold.co/1269x846"
+                alt="About"
+                className="absolute w-full max-w-[800px] top-0 left-[-100px]"
+              />
+            </div>
+            <div className="space-y-6">
+              <p className="text-[#333333] text-base">About Us</p>
+              <h2 className="text-[#405b6f] text-4xl font-semibold capitalize leading-tight">
+                We created the most advanced Scooter technology
+              </h2>
+              <p className="text-[#333333] text-base max-w-md">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum ullamcorper convallis fermentum.
+              </p>
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-full border border-[#cecece]" />
+                <div className="w-4 h-4 bg-[#de7734] rounded-full border" />
+              </div>
+              <p className="text-[#405b6f] text-base font-semibold capitalize">
+                View More
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Core Values Section */}
+        <section className="py-12 bg-white relative z-10">
+          <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-6">
+              <p className="text-[#333333] text-base">Our Core Value</p>
+              <h2 className="text-[#405b6f] text-4xl font-semibold capitalize leading-tight">
+                Less Noise Pollution, Moving Around Swiftly
+              </h2>
+              <p className="text-[#333333] text-base max-w-lg">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum ullamcorper convallis fermentum.
+              </p>
+              <div className="space-y-2">
+                {[...Array(4)].map((_, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <div className="w-3 h-3 bg-[#de7734] rounded-full" />
+                    <p className="text-[#333333] text-base">
+                      Lorem ipsum dolor sit amet.
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-full border border-[#cecece]" />
+                <div className="w-4 h-4 bg-[#de7734] rounded-full border" />
+              </div>
+              <p className="text-[#405b6f] text-base font-semibold capitalize">
+                View More
+              </p>
+            </div>
+            <div className="relative">
+              <div className="w-64 h-64 bg-[#de7734] rounded-full absolute top-0 right-0 outline outline-[3px] outline-offset-[-1.5px]" />
+              <div className="w-32 h-32 rounded-full outline outline-[3px] outline-offset-[-1.5px] outline-[#de7734] absolute bottom-0 left-0" />
+              <div className="w-[600px] h-[500px] bg-[#d9d9d9] rounded-tl-full shadow-[-10px_10px_20px_rgba(0,0,0,0.25)] absolute right-0" />
+            </div>
+          </div>
+        </section>
+      </div>
 
       {/* Products Section */}
       <section className="py-12">
@@ -258,7 +270,7 @@ export default function LandingPage() {
         <img
           src="https://placehold.co/3560x1868"
           alt="Background"
-          className="absolute inset-0 w-full h-full object-cover filter blur-sm"
+          className="absolute inset-0 w-full h-full object-cover"
         />
       </section>
 
