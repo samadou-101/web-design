@@ -3,6 +3,10 @@ import { Montserrat, Nunito } from "next/font/google";
 import Image from "next/image";
 import { CiLocationOn, CiWifiOn } from "react-icons/ci";
 import { RiShieldKeyholeLine } from "react-icons/ri";
+import { BsArrowRight, BsInstagram, BsTwitterX } from "react-icons/bs";
+import { FaFacebookF } from "react-icons/fa";
+import { CgShoppingCart } from "react-icons/cg";
+import { BiSearch } from "react-icons/bi";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -38,16 +42,13 @@ export default function LandingPage() {
           </nav>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
-              <div className="w-5 h-5 bg-[#333333]" />
+              <CgShoppingCart />
               <span className="text-[#333333] text-base hidden sm:inline">
                 Cart
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-6 h-6 relative">
-                <div className="w-3.5 h-3.5 absolute left-1 top-1 rounded-full border-2 border-[#333333]" />
-                <div className="w-1 h-1 absolute right-1 bottom-1 border-2 border-[#333333]" />
-              </div>
+              <BiSearch />
               <span className="text-[#333333] text-base hidden sm:inline">
                 Search
               </span>
@@ -250,7 +251,7 @@ export default function LandingPage() {
       </section>
 
       {/* Scooter Showcase */}
-      <section className=" pb-8 min-h-screen flex items-end h-auto border-2 relative">
+      <section className=" pb-8 min-h-screen flex items-end h-auto relative">
         {/* Background images */}
         <Image
           src={"/foret-content.png"}
@@ -387,14 +388,37 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Subscribe Section */}
+      <section className="py-12 bg-[#de7734]">
+        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8">
+          <h2 className="text-white text-4xl font-semibold capitalize leading-tight">
+            Sign up for special offers and promotions
+          </h2>
+          <div className="space-y-4">
+            <p className="text-white text-xl uppercase">Subscribe</p>
+            <div className="flex items-center gap-2">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="w-full text-white bg-transparent border-b border-white outline-none py-2"
+              />
+              <BsArrowRight color="white" />
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Footer */}
       <footer className={`bg-[#405b6f] text-white py-12 ${nunito.className}`}>
         <div className="container mx-auto px-4 grid md:grid-cols-4 gap-8">
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-12 h-12 bg-[#de7734] rounded-full" />
-              <div className="w-32 h-16 bg-white" />
+          <div className="flex  w-fit flex-col items-center gap-1">
+            <div className="flex items-center gap-1">
+              <span className="text-5xl font-bold text-white">M</span>
+              <div className="w-6 h-6 bg-[#de7734] rounded-full" />
+              <span className="text-5xl font-bold text-white">DERN</span>
             </div>
+            <span className="text-5xl font-bold text-white self-start">
+              RIDES
+            </span>
           </div>
           <div>
             <h3 className="text-2xl font-bold capitalize mb-4">Menu</h3>
@@ -422,12 +446,14 @@ export default function LandingPage() {
             <h3 className="text-2xl font-bold capitalize mb-4">Social</h3>
             <div className="flex gap-4">
               <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                <div className="w-4 h-4 bg-[#405b6f]" />
+                <BsInstagram color="#405b6f" />
               </div>
               <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                <div className="w-2 h-4 bg-[#405b6f]" />
+                <BsTwitterX color="#405b6f" />
               </div>
-              <div className="w-12 h-12 bg-white rounded-full" />
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                <FaFacebookF color="#405b6f" />
+              </div>
             </div>
           </div>
         </div>
