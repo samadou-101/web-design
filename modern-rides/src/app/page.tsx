@@ -68,7 +68,7 @@ export default function LandingPage() {
         />
         {/* Hero Section */}
         <section
-          className="relative border-2
+          className="relative 
          pt-24 h-screen"
         >
           <Image
@@ -158,7 +158,7 @@ export default function LandingPage() {
                   View More
                 </p>
                 <div className="w-12 h-12 rounded-full absolute border -right-8 border-[#cecece]" />
-                <div className="w-4 h-4 bg-[#de7734] rounded-full -right-8 absolute " />
+                <div className="w-4 h-4 bg-[#de7734] rounded-full -right-8 absolute" />
               </div>
             </div>
           </div>
@@ -186,25 +186,27 @@ export default function LandingPage() {
                   </div>
                 ))}
               </div>
-              <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-full border border-[#cecece]" />
-                <div className="w-4 h-4 bg-[#de7734] rounded-full border" />
+              <div className="flex gap-4 relative w-fit items-center">
+                <p className="text-[#405b6f] text-base font-semibold capitalize">
+                  View More
+                </p>
+                <div className="w-12 h-12 rounded-full absolute border -right-8 border-[#cecece]" />
+                <div className="w-4 h-4 bg-[#de7734] rounded-full -right-8 absolute" />
               </div>
-              <p className="text-[#405b6f] text-base font-semibold capitalize">
-                View More
-              </p>
             </div>
-            <div className="relative">
-              <div className="w-64 h-64 bg-[#de7734] rounded-full absolute top-0 right-0 outline outline-[3px] outline-offset-[-1.5px]" />
-              <div className="w-32 h-32 rounded-full outline outline-[3px] outline-offset-[-1.5px] outline-[#de7734] absolute bottom-0 left-0" />
-              <div className="w-[600px] h-[500px] bg-[#d9d9d9] rounded-tl-full shadow-[-10px_10px_20px_rgba(0,0,0,0.25)] absolute right-0" />
+            <div className="relative ml-auto">
+              <div className="w-64 h-64 bg-[#de7734] rounded-full absolute -z-10 -top-12 -right-32  outline-offset-[-1.5px]" />
+              <div className="w-24 h-24 rounded-full outline-2 outline-offset-[-1.5px] outline-[#de7734] absolute -bottom-10 -left-10" />
+              <div className="w-[600px] h-[500px] overflow-hidden bg-[#d9d9d9] relative z-20 rounded-tr-[30%] shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]">
+                <Image src={"/scooter-3.jpg"} fill alt="scooter 1" />
+              </div>
             </div>
           </div>
         </section>
       </div>
-
+      <section className="h-[50vh]">test</section>
       {/* Products Section */}
-      <section className="py-12">
+      <section className="py-12 pt-40 border-2">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
           <div className="relative">
             <div className="w-64 h-64 bg-[#de7734] rounded-full absolute top-0 left-0 outline outline-[3px] outline-offset-[-1.5px]" />
