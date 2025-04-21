@@ -340,83 +340,53 @@ export default function LandingPage() {
           </p>
         </div>
       </section>
+
       {/* Rental Service Section */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-[#333333] text-base">Rental Service</p>
-          <h2 className="text-[#405b6f] text-4xl font-semibold capitalize leading-tight mb-8">
-            Jump on and Enjoy the Ride
-          </h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                name: "Suspendisse",
-                price: "$20/ Hour",
-                img: "https://placehold.co/245x264",
-              },
-              {
-                name: "Morbi leo",
-                price: "$10/ Hour",
-                img: "https://placehold.co/338x338",
-              },
-              {
-                name: "Maximus",
-                price: "$20/ Hour",
-                img: "https://placehold.co/159x319",
-              },
-              {
-                name: "Fusce vel",
-                price: "$20/ Hour",
-                img: "https://placehold.co/630x420",
-              },
-            ].map((rental) => (
-              <div key={rental.name} className="relative">
-                <div className="w-[300px] h-[400px] bg-[#d9d9d9] rounded-tl-full shadow-[-10px_10px_20px_rgba(0,0,0,0.07)]" />
-                <img
-                  src={rental.img}
-                  alt={rental.name}
-                  className="absolute w-full max-w-[200px] top-10 left-10"
-                />
-                <div className="mt-4 space-y-2">
-                  <p className="text-[#405b6f] text-2xl font-semibold">
-                    {rental.name}
-                  </p>
-                  <p className="text-[#de7734] text-xl font-semibold">
-                    {rental.price}
-                  </p>
+      <section className="py-8 mt-16 flex min-h-screen gap-4 flex-col items-center">
+        <span>Rental Service</span>
+        <h1 className="text-4xl font-bold text-[#405B6F]">
+          Jump On And Enjoy The Ride
+        </h1>
+        <div className="grid mt-4 md:grid-cols-4 gap-8 z-90">
+          {[
+            { name: "Suspendisse", price: "$20/Hour", img: "/ride-1.png" },
+            { name: "Morbi leo", price: "$10/Hour", img: "/ride-2.png" },
+            { name: "Maximus", price: "$20/Hour", img: "/ride-3.png" },
+            { name: "Fusce vel", price: "$20/Hour", img: "/ride-4.png" },
+          ].map((scooter, index) => (
+            <div key={index} className="relative w-[90%] z-20">
+              <div className="bg-white rounded-bl-[40%] shadow-lg flex flex-col items-center p-4">
+                <div className="relative p-8 w-[300px] h-[300px] flex items-center justify-center">
+                  <Image
+                    src={scooter.img}
+                    alt={scooter.name}
+                    width={200}
+                    height={200}
+                    className=" w-full h-auto"
+                  />
+                  <div className="absolute -bottom-0 -z-10 -left-4 w-16 h-16 bg-[#de7734] rounded-full "></div>
                 </div>
-                <div className="w-20 h-20 bg-[#de7734] rounded-full outline outline-[3px] outline-offset-[-1.5px] absolute bottom-0 left-1/2 transform -translate-x-1/2" />
               </div>
-            ))}
-          </div>
-          <div className="flex justify-center gap-4 mt-8">
-            <div className="w-12 h-12 rounded-full border border-[#cecece]" />
-            <div className="w-4 h-4 bg-[#de7734] rounded-full border" />
-            <p className="text-[#405b6f] text-base font-semibold capitalize">
-              View More
-            </p>
-          </div>
-        </div>
-      </section>
-      {/* Subscribe Section */}
-      <section className="py-12 bg-[#de7734]">
-        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8">
-          <h2 className="text-white text-4xl font-semibold capitalize leading-tight">
-            Sign up for special offers and promotions
-          </h2>
-          <div className="space-y-4">
-            <p className="text-white text-xl uppercase">Subscribe</p>
-            <div className="flex items-center gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="w-full text-white bg-transparent border-b border-white outline-none py-2"
-              />
-              <div className="w-4 h-4 bg-white" />
+              <div className="flex top-[107%] gap-4 text-center left-20 flex-col absolute">
+                <p className=" text-2xl text-[#405B6F] font-semibold">
+                  {scooter.name}
+                </p>
+                <p className="top-[118%] text-[#de7734] font-bold">
+                  {scooter.price}
+                </p>
+              </div>
             </div>
-          </div>
+          ))}
+        </div>
+        <div className="flex gap-4 relative mt-auto pb-36 w-fit items-center">
+          <p className="text-[#405b6f] text-base font-semibold capitalize">
+            View More
+          </p>
+          <div className="w-12 h-12 rounded-full absolute border -right-8 border-[#cecece]" />
+          <div className="w-4 h-4 bg-[#de7734] rounded-full -right-8 absolute" />
         </div>
       </section>
+
       {/* Footer */}
       <footer className={`bg-[#405b6f] text-white py-12 ${nunito.className}`}>
         <div className="container mx-auto px-4 grid md:grid-cols-4 gap-8">
