@@ -19,9 +19,8 @@ export default function LandingPage() {
     <div
       className={`${montserrat.className} min-h-screen bg-neutral-100 overflow-x-hidden relative`}
     >
-      {/* <div className="absolute inset-0 bg-[#d9d9d9] opacity-20 mix-blend-screen z-0" /> */}
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-transparent shadow-md">
+      <header className="fixed top-0 left-0 right-0 z-[999] bg-transparent shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex flex-col items-center gap-1">
             <div className="flex items-center gap-1">
@@ -34,11 +33,33 @@ export default function LandingPage() {
             </span>
           </div>
           <nav className="hidden md:flex gap-6 text-[#333333] text-base">
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/products">Products</Link>
-            <Link href="/rental">Rental Service</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="/" className="hover:text-[#de7734] transition-colors">
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className="hover:text-[#de7734] transition-colors"
+            >
+              About
+            </Link>
+            <Link
+              href="/products"
+              className="hover:text-[#de7734] transition-colors"
+            >
+              Products
+            </Link>
+            <Link
+              href="/rental"
+              className="hover:text-[#de7734] transition-colors"
+            >
+              Rental Service
+            </Link>
+            <Link
+              href="/contact"
+              className="hover:text-[#de7734] transition-colors"
+            >
+              Contact
+            </Link>
           </nav>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
@@ -66,22 +87,18 @@ export default function LandingPage() {
           priority
         />
         {/* Hero Section */}
-        <section
-          className="relative 
-         pt-24 h-screen"
-        >
+        <section className="relative pt-24 h-screen">
           <Image
             src="/hero-mask.png"
             alt="main scooter"
             width={0}
             height={0}
-            className="absolute bottom-0 left-0 w-screen h-auto object-contain  lg:-bottom-[100px] xl:-bottom-[200px] 2xl:-bottom-[400px] object-bottom"
+            className="absolute bottom-0 left-0 w-screen h-auto object-contain lg:-bottom-[100px] xl:-bottom-[200px] 2xl:-bottom-[400px] object-bottom"
             sizes="100vw"
             priority
           />
-
           <Image
-            src={"/bigscooter.png"}
+            src="/bigscooter.png"
             width={500}
             height={500}
             alt="main scooter"
@@ -119,13 +136,13 @@ export default function LandingPage() {
                 <p className="text-[#de7734] text-3xl md:text-5xl font-semibold">
                   $1699.00
                 </p>
-                <p className="text-[#333333] text-sm text-left w-[75%] max-xl:w-full  mt-2">
+                <p className="text-[#333333] text-sm text-left w-[75%] max-xl:w-full mt-2">
                   Lorem ipsum <span className="font-semibold">15% off</span>,
                   consectetur adipiscing elit.{" "}
                   <span className="font-semibold">Shipping</span> ullamcorper
                   convallis fermentum.
                 </p>
-                <button className="bg-[#de7734] text-white mt-2 px-6 py-3 rounded-full uppercase text-sm font-medium border  hover:bg-[#c5682d] transition">
+                <button className="bg-[#de7734] text-white mt-2 px-6 py-3 rounded-full uppercase text-sm font-medium border hover:bg-[#c5682d] transition">
                   Add to Cart
                 </button>
               </div>
@@ -137,10 +154,10 @@ export default function LandingPage() {
         <section className="py-12 pt-26 relative bg-neutral-100 z-10">
           <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
             <div className="relative">
-              <div className="w-64 h-64 bg-[#de7734] rounded-full absolute -z-10 -top-12 -left-32  outline-offset-[-1.5px]" />
+              <div className="w-64 h-64 bg-[#de7734] rounded-full absolute -z-10 -top-12 -left-32 outline-offset-[-1.5px]" />
               <div className="w-24 h-24 rounded-full outline-2 outline-offset-[-1.5px] outline-[#de7734] absolute -bottom-10 right-24" />
               <div className="w-[600px] h-[500px] overflow-hidden bg-[#d9d9d9] relative z-20 rounded-tl-[30%] shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]">
-                <Image src={"/scooter-1.png"} fill alt="scooter 1" />
+                <Image src="/scooter-1.png" fill alt="scooter 1" />
               </div>
             </div>
             <div className="space-y-6">
@@ -164,7 +181,7 @@ export default function LandingPage() {
         </section>
 
         {/* Core Values Section */}
-        <section className=" bg-neutral-100 relative ">
+        <section className="bg-neutral-100 relative">
           <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               <p className="text-[#333333] text-base">Our Core Value</p>
@@ -194,9 +211,9 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="relative z-90 ml-auto">
-              <div className="w-64 h-64 bg-[#de7734] rounded-full absolute -z-10 -top-12 -right-32  outline-offset-[-1.5px]" />
+              <div className="w-64 h-64 bg-[#de7734] rounded-full absolute -z-10 -top-12 -right-32 outline-offset-[-1.5px]" />
               <div className="w-[600px] h-[500px] overflow-hidden bg-[#d9d9d9] relative rounded-tr-[30%] shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]">
-                <Image src={"/scooter-3.jpg"} fill alt="scooter 1" />
+                <Image src="/scooter-3.jpg" fill alt="scooter 1" />
               </div>
             </div>
           </div>
@@ -204,7 +221,7 @@ export default function LandingPage() {
       </div>
 
       {/* Round Big Circle */}
-      <section className="relative -top-24  w-screen h-[70vh] flex items-center justify-center">
+      <section className="relative -top-24 w-screen h-[70vh] flex items-center justify-center">
         <div className="w-[60vh] relative h-[60vh] rounded-full bg-white flex items-center justify-center">
           <div className="w-24 h-24 rounded-full outline-2 outline-offset-[-1.5px] outline-[#de7734] absolute top-0 right-10" />
           <div className="flex flex-col items-center gap-1">
@@ -224,10 +241,10 @@ export default function LandingPage() {
       <section className="relative -top-52">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
           <div className="relative">
-            <div className="w-64 h-64 bg-[#de7734] rounded-full absolute z-10 -top-12 -left-32  outline-offset-[-1.5px]" />
+            <div className="w-64 h-64 bg-[#de7734] rounded-full absolute z-10 -top-12 -left-32 outline-offset-[-1.5px]" />
             <div className="w-24 h-24 rounded-full outline-2 outline-offset-[-1.5px] outline-[#de7734] absolute -bottom-10 right-24" />
             <div className="w-[600px] h-[500px] overflow-hidden bg-[#d9d9d9] relative z-20 rounded-tl-[30%] shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]">
-              <Image src={"/scooter-2.png"} fill alt="scooter 1" />
+              <Image src="/scooter-2.png" fill alt="scooter 1" />
             </div>
           </div>
           <div className="space-y-6">
@@ -251,21 +268,19 @@ export default function LandingPage() {
       </section>
 
       {/* Scooter Showcase */}
-      <section className=" pb-8 min-h-screen flex items-end h-auto relative">
-        {/* Background images */}
+      <section className="pb-8 min-h-screen flex items-end h-auto relative">
         <Image
-          src={"/foret-content.png"}
+          src="/foret-content.png"
           alt="forest background"
           fill
           className="object-cover"
         />
         <Image
-          src={"/content-mountain.png"}
+          src="/content-mountain.png"
           alt="mountain background"
           fill
           className="object-cover object-center"
         />
-
         <div className="container mx-auto px-4 grid md:grid-cols-3 gap-8">
           {[
             {
@@ -288,20 +303,16 @@ export default function LandingPage() {
             },
           ].map((scooter, index) => (
             <div key={scooter.id} className="relative z-90 w-[80%]">
-              <div className="bg-neutral-200 rounded-bl-[40%]  shadow-lg w-full  h-full flex flex-col items-center justify-center p-6 relative">
-                {/* ID Label */}
+              <div className="bg-neutral-200 rounded-bl-[40%] shadow-lg w-full h-full flex flex-col items-center justify-center p-6 relative">
                 <p className="absolute -top-[40%] left-6 text-[#de7734] text-4xl font-bold">
                   {scooter.id}
                 </p>
-                {/* Scooter Name */}
-                <p className=" absolute -top-[20%] left-6 text-[#D3D3D3]/80 text-2xl font-semibold">
+                <p className="absolute -top-[20%] left-6 text-[#D3D3D3]/80 text-2xl font-semibold">
                   {scooter.name}
                 </p>
-                {/* Price */}
-                <p className=" absolute -top-[20%] right-6 text-[#de7734] text-xl font-bold">
+                <p className="absolute -top-[20%] right-6 text-[#de7734] text-xl font-bold">
                   {scooter.price}
                 </p>
-                {/* Scooter Image */}
                 <div className="w-[90%] h-[70%] flex items-center justify-center">
                   <Image
                     src={scooter.img}
@@ -311,20 +322,18 @@ export default function LandingPage() {
                     className="w-auto max-w-full h-auto mb-4"
                   />
                 </div>
-                {/* Add to Cart Button (only for first scooter) */}
-                {/* Orange Circle at Bottom Left */}
                 {(index === 0 || index === 2) && (
                   <div className="absolute -bottom-5 left-0 w-22 h-22 -z-10 bg-[#de7734] rounded-full"></div>
                 )}
                 {index === 1 && (
                   <div className="absolute -top-6 -left-6 w-18 h-18 -z-10 bg-transparent outline-2 outline-[#de7734] rounded-full"></div>
                 )}
-                {/* <div className="absolute bottom-[-20px] left-[-20px] w-12 h-12 bg-[#de7734] rounded-full"></div> */}
               </div>
             </div>
           ))}
         </div>
       </section>
+
       {/* Testimonial Section */}
       <section className="py-12">
         <div className="container mx-auto px-4 text-center">
@@ -363,13 +372,13 @@ export default function LandingPage() {
                     alt={scooter.name}
                     width={200}
                     height={200}
-                    className=" w-full h-auto"
+                    className="w-full h-auto"
                   />
-                  <div className="absolute -bottom-0 -z-10 -left-4 w-16 h-16 bg-[#de7734] rounded-full "></div>
+                  <div className="absolute -bottom-0 -z-10 -left-4 w-16 h-16 bg-[#de7734] rounded-full"></div>
                 </div>
               </div>
               <div className="flex top-[107%] gap-4 text-center left-20 flex-col absolute">
-                <p className=" text-2xl text-[#405B6F] font-semibold">
+                <p className="text-2xl text-[#405B6F] font-semibold">
                   {scooter.name}
                 </p>
                 <p className="top-[118%] text-[#de7734] font-bold">
@@ -407,10 +416,11 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
       {/* Footer */}
       <footer className={`bg-[#405b6f] text-white py-12 ${nunito.className}`}>
         <div className="container mx-auto px-4 grid md:grid-cols-4 gap-8">
-          <div className="flex  w-fit flex-col items-center gap-1">
+          <div className="flex w-fit flex-col items-center gap-1">
             <div className="flex items-center gap-1">
               <span className="text-5xl font-bold text-white">M</span>
               <div className="w-6 h-6 bg-[#de7734] rounded-full" />
@@ -423,13 +433,30 @@ export default function LandingPage() {
           <div>
             <h3 className="text-2xl font-bold capitalize mb-4">Menu</h3>
             <div className="space-y-2 text-base">
-              <Link href="/">Home</Link>
-              <br />
-              <Link href="/about">About</Link>
-              <br />
-              <Link href="/products">Products</Link>
-              <br />
-              <Link href="/rental">Rental Service</Link>
+              <Link
+                href="/"
+                className="block hover:text-[#de7734] transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                className="block hover:text-[#de7734] transition-colors"
+              >
+                About
+              </Link>
+              <Link
+                href="/products"
+                className="block hover:text-[#de7734] transition-colors"
+              >
+                Products
+              </Link>
+              <Link
+                href="/rental"
+                className="block hover:text-[#de7734] transition-colors"
+              >
+                Rental Service
+              </Link>
             </div>
           </div>
           <div>
@@ -460,8 +487,18 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 mt-8 border-t border-white pt-4 flex justify-between text-base">
           <p>Copyright Dotcreativemarket</p>
           <div className="space-x-4">
-            <Link href="/terms">Terms of Use</Link>
-            <Link href="/privacy">Privacy Policy</Link>
+            <Link
+              href="/terms"
+              className="hover:text-[#de7734] transition-colors"
+            >
+              Terms of Use
+            </Link>
+            <Link
+              href="/privacy"
+              className="hover:text-[#de7734] transition-colors"
+            >
+              Privacy Policy
+            </Link>
           </div>
         </div>
       </footer>
