@@ -15,8 +15,7 @@ export default function LandingPage() {
     <div
       className={`${montserrat.className} min-h-screen bg-neutral-100 overflow-x-hidden relative`}
     >
-      <div className="absolute inset-0 bg-[#d9d9d9] opacity-20 mix-blend-screen z-0" />
-
+      {/* <div className="absolute inset-0 bg-[#d9d9d9] opacity-20 mix-blend-screen z-0" /> */}
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-transparent shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -56,7 +55,6 @@ export default function LandingPage() {
           </div>
         </div>
       </header>
-
       <div className="relative">
         <Image
           src="/hero-background.png"
@@ -135,7 +133,7 @@ export default function LandingPage() {
         </section>
 
         {/* About Section */}
-        <section className="py-12 pt-26 relative bg-white z-10">
+        <section className="py-12 pt-26 relative bg-neutral-100 z-10">
           <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
             <div className="relative">
               <div className="w-64 h-64 bg-[#de7734] rounded-full absolute -z-10 -top-12 -left-32  outline-offset-[-1.5px]" />
@@ -165,7 +163,7 @@ export default function LandingPage() {
         </section>
 
         {/* Core Values Section */}
-        <section className="py-12 bg-white relative z-10">
+        <section className=" bg-neutral-100 relative ">
           <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               <p className="text-[#333333] text-base">Our Core Value</p>
@@ -194,29 +192,42 @@ export default function LandingPage() {
                 <div className="w-4 h-4 bg-[#de7734] rounded-full -right-8 absolute" />
               </div>
             </div>
-            <div className="relative ml-auto">
+            <div className="relative z-90 ml-auto">
               <div className="w-64 h-64 bg-[#de7734] rounded-full absolute -z-10 -top-12 -right-32  outline-offset-[-1.5px]" />
-              <div className="w-24 h-24 rounded-full outline-2 outline-offset-[-1.5px] outline-[#de7734] absolute -bottom-10 -left-10" />
-              <div className="w-[600px] h-[500px] overflow-hidden bg-[#d9d9d9] relative z-20 rounded-tr-[30%] shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]">
+              <div className="w-[600px] h-[500px] overflow-hidden bg-[#d9d9d9] relative rounded-tr-[30%] shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]">
                 <Image src={"/scooter-3.jpg"} fill alt="scooter 1" />
               </div>
             </div>
           </div>
         </section>
       </div>
-      <section className="h-[50vh]">test</section>
+
+      {/* Round Big Circle */}
+      <section className="relative -top-24  w-screen h-[70vh] flex items-center justify-center">
+        <div className="w-[60vh] relative h-[60vh] rounded-full bg-white flex items-center justify-center">
+          <div className="w-24 h-24 rounded-full outline-2 outline-offset-[-1.5px] outline-[#de7734] absolute top-0 right-10" />
+          <div className="flex flex-col items-center gap-1">
+            <div className="flex items-center gap-1">
+              <span className="text-6xl font-bold text-[#405b6f]">M</span>
+              <div className="w-12 h-12 bg-[#de7734] rounded-full" />
+              <span className="text-6xl font-bold text-[#405b6f]">DERN</span>
+            </div>
+            <span className="text-6xl font-bold text-[#405b6f] self-start">
+              RIDES
+            </span>
+          </div>
+        </div>
+      </section>
+
       {/* Products Section */}
-      <section className="py-12 pt-40 border-2">
+      <section className="relative -top-52">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
           <div className="relative">
-            <div className="w-64 h-64 bg-[#de7734] rounded-full absolute top-0 left-0 outline outline-[3px] outline-offset-[-1.5px]" />
-            <div className="w-32 h-32 rounded-full outline outline-[3px] outline-offset-[-1.5px] outline-[#de7734] absolute bottom-0 right-0" />
-            <div className="w-[600px] h-[500px] bg-[#d9d9d9] rounded-tl-full shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]" />
-            <img
-              src="https://placehold.co/1020x680"
-              alt="Products"
-              className="absolute w-full max-w-[600px] top-10 left-0"
-            />
+            <div className="w-64 h-64 bg-[#de7734] rounded-full absolute z-10 -top-12 -left-32  outline-offset-[-1.5px]" />
+            <div className="w-24 h-24 rounded-full outline-2 outline-offset-[-1.5px] outline-[#de7734] absolute -bottom-10 right-24" />
+            <div className="w-[600px] h-[500px] overflow-hidden bg-[#d9d9d9] relative z-20 rounded-tl-[30%] shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]">
+              <Image src={"/scooter-2.png"} fill alt="scooter 1" />
+            </div>
           </div>
           <div className="space-y-6">
             <p className="text-[#333333] text-base">Our Products</p>
@@ -227,87 +238,101 @@ export default function LandingPage() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Vestibulum ullamcorper convallis fermentum.
             </p>
-            <div className="flex gap-4">
-              <div className="w-12 h-12 rounded-full border border-[#cecece]" />
-              <div className="w-4 h-4 bg-[#de7734] rounded-full border" />
+            <div className="flex gap-4 relative w-fit items-center">
+              <p className="text-[#405b6f] text-base font-semibold capitalize">
+                View More
+              </p>
+              <div className="w-12 h-12 rounded-full absolute border -right-8 border-[#cecece]" />
+              <div className="w-4 h-4 bg-[#de7734] rounded-full -right-8 absolute" />
             </div>
-            <p className="text-[#405b6f] text-base font-semibold capitalize">
-              View More
-            </p>
           </div>
         </div>
       </section>
 
       {/* Scooter Showcase */}
-      <section className="py-12 bg-[#d9d9d9] relative">
+      <section className=" pb-8 min-h-screen flex items-end h-auto border-2 relative">
+        {/* Background images */}
+        <Image
+          src={"/foret-content.png"}
+          alt="forest background"
+          fill
+          className="object-cover"
+        />
+        <Image
+          src={"/content-mountain.png"}
+          alt="mountain background"
+          fill
+          className="object-cover object-center"
+        />
+
         <div className="container mx-auto px-4 grid md:grid-cols-3 gap-8">
           {[
             {
               id: "01",
               name: "Black Scooter",
               price: "$200",
-              img: "https://placehold.co/434x434",
+              img: "/scooter1_content.png",
             },
             {
               id: "02",
               name: "Faucibus Scooter",
               price: "$189",
-              img: "https://placehold.co/604x404",
+              img: "/scooter2-content.png",
             },
             {
               id: "03",
               name: "White Scooter",
-              price: "$209",
-              img: "https://placehold.co/449x449",
+              price: "$189",
+              img: "/scooter3-content.png",
             },
-          ].map((scooter) => (
-            <div key={scooter.id} className="space-y-4">
-              <div className="relative">
-                <div className="w-[400px] h-[350px] bg-[#d9d9d9] rounded-tl-full shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]" />
-                <img
-                  src={scooter.img}
-                  alt={scooter.name}
-                  className="absolute w-full max-w-[300px] top-10 left-10"
-                />
-              </div>
-              <div className="space-y-2">
-                <p className="text-[#de7734] text-5xl font-semibold">
+          ].map((scooter, index) => (
+            <div key={scooter.id} className="relative z-90 w-[80%]">
+              <div className="bg-neutral-200 rounded-bl-[40%]  shadow-lg w-full  h-full flex flex-col items-center justify-center p-6 relative">
+                {/* ID Label */}
+                <p className="absolute -top-[40%] left-6 text-[#de7734] text-4xl font-bold">
                   {scooter.id}
                 </p>
-                <div className="flex justify-between">
-                  <p className="text-[#d3d3d3] text-2xl font-semibold">
-                    {scooter.name}
-                  </p>
-                  <p className="text-[#de7734] text-2xl font-semibold">
-                    {scooter.price}
-                  </p>
+                {/* Scooter Name */}
+                <p className=" absolute -top-[20%] left-6 text-[#D3D3D3]/80 text-2xl font-semibold">
+                  {scooter.name}
+                </p>
+                {/* Price */}
+                <p className=" absolute -top-[20%] right-6 text-[#de7734] text-xl font-bold">
+                  {scooter.price}
+                </p>
+                {/* Scooter Image */}
+                <div className="w-[90%] h-[70%] flex items-center justify-center">
+                  <Image
+                    src={scooter.img}
+                    width={200}
+                    height={200}
+                    alt={scooter.name}
+                    className="w-auto max-w-full h-auto mb-4"
+                  />
                 </div>
-                <button className="bg-[#de7734] text-white px-6 py-3 rounded-full uppercase text-sm font-medium border border-[#333333] hover:bg-[#c5682d] transition">
-                  Add to Cart
-                </button>
+                {/* Add to Cart Button (only for first scooter) */}
+                {/* Orange Circle at Bottom Left */}
+                {(index === 0 || index === 2) && (
+                  <div className="absolute -bottom-5 left-0 w-22 h-22 -z-10 bg-[#de7734] rounded-full"></div>
+                )}
+                {index === 1 && (
+                  <div className="absolute -top-6 -left-6 w-18 h-18 -z-10 bg-transparent outline-2 outline-[#de7734] rounded-full"></div>
+                )}
+                {/* <div className="absolute bottom-[-20px] left-[-20px] w-12 h-12 bg-[#de7734] rounded-full"></div> */}
               </div>
             </div>
           ))}
         </div>
-        <img
-          src="https://placehold.co/3560x1868"
-          alt="Background"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
       </section>
-
       {/* Testimonial Section */}
       <section className="py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="relative">
             <p className="text-[#333333] text-xl max-w-3xl mx-auto leading-loose">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-              augue eros, pellentesque nec tempor eu, sollicitudin at dolor.
-              Cras commodo venenatis diam, nec venenatis massa auctor at.
-            </p>
-            <p className="absolute top-0 left-0 text-[#333333] text-4xl">“</p>
-            <p className="absolute bottom-0 right-0 text-[#333333] text-4xl">
-              ”
+              <span className="font-bold">”</span> Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Quisque augue eros, pellentesque nec
+              tempor eu, sollicitudin at dolor. Cras commodo venenatis diam, nec
+              venenatis massa auctor at. <span className="font-bold">”</span>
             </p>
           </div>
           <p className="text-[#de7734] text-3xl font-medium capitalize mt-4">
@@ -315,7 +340,6 @@ export default function LandingPage() {
           </p>
         </div>
       </section>
-
       {/* Rental Service Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 text-center">
@@ -374,7 +398,6 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-
       {/* Subscribe Section */}
       <section className="py-12 bg-[#de7734]">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8">
@@ -394,7 +417,6 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className={`bg-[#405b6f] text-white py-12 ${nunito.className}`}>
         <div className="container mx-auto px-4 grid md:grid-cols-4 gap-8">
