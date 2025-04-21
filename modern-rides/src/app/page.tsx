@@ -1,0 +1,418 @@
+import Link from "next/link";
+import { Montserrat, Nunito } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
+const nunito = Nunito({ subsets: ["latin"], weight: ["700"] });
+
+export default function LandingPage() {
+  return (
+    <div
+      className={`${montserrat.className} min-h-screen bg-neutral-100 overflow-x-hidden`}
+    >
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 bg-[#de7734] rounded-full" />
+            <div className="w-20 h-10 bg-[#405b6f]" />
+          </div>
+          <nav className="hidden md:flex gap-6 text-[#333333] text-base">
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/products">Products</Link>
+            <Link href="/rental">Rental Service</Link>
+            <Link href="/contact">Contact</Link>
+          </nav>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <div className="w-5 h-5 bg-[#333333]" />
+              <span className="text-[#333333] text-base hidden sm:inline">
+                Cart
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-6 h-6 relative">
+                <div className="w-3.5 h-3.5 absolute left-1 top-1 rounded-full border-2 border-[#333333]" />
+                <div className="w-1 h-1 absolute right-1 bottom-1 border-2 border-[#333333]" />
+              </div>
+              <span className="text-[#333333] text-base hidden sm:inline">
+                Search
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative pt-24 pb-12">
+        <div className="absolute inset-0 bg-[#d9d9d9] opacity-20 mix-blend-screen" />
+        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+          <div className="space-y-6">
+            <p className="text-[#333333] text-base">On Sale Now</p>
+            <h1 className="text-[#405b6f] text-4xl md:text-6xl font-semibold uppercase">
+              Electric Scooter
+            </h1>
+            <div className="flex flex-wrap gap-4">
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 bg-[#405b6f]" />
+                <span className="text-[#333333] text-sm capitalize">
+                  Wireless Bike
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-6 bg-[#212121] border border-[#405b6f]" />
+                <span className="text-[#333333] text-sm capitalize">
+                  Smart Lock
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-5 h-5 bg-[#405b6f]" />
+                <span className="text-[#333333] text-sm capitalize">
+                  Location GPS
+                </span>
+              </div>
+            </div>
+            <button className="bg-[#de7734] text-white px-6 py-3 rounded-full uppercase text-sm font-medium border border-[#333333] hover:bg-[#c5682d] transition">
+              Add to Cart
+            </button>
+          </div>
+          <div className="relative">
+            <img
+              src="https://placehold.co/795x876"
+              alt="Electric Scooter"
+              className="w-full max-w-[500px] mx-auto"
+            />
+            <div className="absolute top-4 right-4 text-right">
+              <p className="text-[#de7734] text-3xl md:text-5xl font-semibold">
+                $1699.00
+              </p>
+              <p className="text-[#333333] text-sm mt-2">
+                Lorem ipsum <span className="font-semibold">15% off</span>,
+                consectetur adipiscing elit.{" "}
+                <span className="font-semibold">Shipping</span> ullamcorper
+                convallis fermentum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-12">
+        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+          <div className="relative">
+            <div className="w-64 h-64 bg-[#de7734] rounded-full absolute top-0 left-0 outline outline-[3px] outline-offset-[-1.5px]" />
+            <div className="w-32 h-32 rounded-full outline outline-[3px] outline-offset-[-1.5px] outline-[#de7734] absolute bottom-0 right-0" />
+            <div className="w-[600px] h-[500px] bg-[#d9d9d9] rounded-tl-full shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]" />
+            <img
+              src="https://placehold.co/1269x846"
+              alt="About"
+              className="absolute w-full max-w-[800px] top-0 left-[-100px]"
+            />
+          </div>
+          <div className="space-y-6">
+            <p className="text-[#333333] text-base">About Us</p>
+            <h2 className="text-[#405b6f] text-4xl font-semibold capitalize leading-tight">
+              We created the most advanced Scooter technology
+            </h2>
+            <p className="text-[#333333] text-base max-w-md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Vestibulum ullamcorper convallis fermentum.
+            </p>
+            <div className="flex gap-4">
+              <div className="w-12 h-12 rounded-full border border-[#cecece]" />
+              <div className="w-4 h-4 bg-[#de7734] rounded-full border" />
+            </div>
+            <p className="text-[#405b6f] text-base font-semibold capitalize">
+              View More
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+          <div className="space-y-6">
+            <p className="text-[#333333] text-base">Our Core Value</p>
+            <h2 className="text-[#405b6f] text-4xl font-semibold capitalize leading-tight">
+              Less Noise Pollution, Moving Around Swiftly
+            </h2>
+            <p className="text-[#333333] text-base max-w-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Vestibulum ullamcorper convallis fermentum.
+            </p>
+            <div className="space-y-2">
+              {[...Array(4)].map((_, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-[#de7734] rounded-full" />
+                  <p className="text-[#333333] text-base">
+                    Lorem ipsum dolor sit amet.
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="flex gap-4">
+              <div className="w-12 h-12 rounded-full border border-[#cecece]" />
+              <div className="w-4 h-4 bg-[#de7734] rounded-full border" />
+            </div>
+            <p className="text-[#405b6f] text-base font-semibold capitalize">
+              View More
+            </p>
+          </div>
+          <div className="relative">
+            <div className="w-64 h-64 bg-[#de7734] rounded-full absolute top-0 right-0 outline outline-[3px] outline-offset-[-1.5px]" />
+            <div className="w-32 h-32 rounded-full outline outline-[3px] outline-offset-[-1.5px] outline-[#de7734] absolute bottom-0 left-0" />
+            <div className="w-[600px] h-[500px] bg-[#d9d9d9] rounded-tl-full shadow-[-10px_10px_20px_rgba(0,0,0,0.25)] absolute right-0" />
+          </div>
+        </div>
+      </section>
+
+      {/* Products Section */}
+      <section className="py-12">
+        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+          <div className="relative">
+            <div className="w-64 h-64 bg-[#de7734] rounded-full absolute top-0 left-0 outline outline-[3px] outline-offset-[-1.5px]" />
+            <div className="w-32 h-32 rounded-full outline outline-[3px] outline-offset-[-1.5px] outline-[#de7734] absolute bottom-0 right-0" />
+            <div className="w-[600px] h-[500px] bg-[#d9d9d9] rounded-tl-full shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]" />
+            <img
+              src="https://placehold.co/1020x680"
+              alt="Products"
+              className="absolute w-full max-w-[600px] top-10 left-0"
+            />
+          </div>
+          <div className="space-y-6">
+            <p className="text-[#333333] text-base">Our Products</p>
+            <h2 className="text-[#405b6f] text-4xl font-semibold capitalize leading-tight">
+              Start the Scooter Revolution
+            </h2>
+            <p className="text-[#333333] text-base max-w-md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Vestibulum ullamcorper convallis fermentum.
+            </p>
+            <div className="flex gap-4">
+              <div className="w-12 h-12 rounded-full border border-[#cecece]" />
+              <div className="w-4 h-4 bg-[#de7734] rounded-full border" />
+            </div>
+            <p className="text-[#405b6f] text-base font-semibold capitalize">
+              View More
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Scooter Showcase */}
+      <section className="py-12 bg-[#d9d9d9] relative">
+        <div className="container mx-auto px-4 grid md:grid-cols-3 gap-8">
+          {[
+            {
+              id: "01",
+              name: "Black Scooter",
+              price: "$200",
+              img: "https://placehold.co/434x434",
+            },
+            {
+              id: "02",
+              name: "Faucibus Scooter",
+              price: "$189",
+              img: "https://placehold.co/604x404",
+            },
+            {
+              id: "03",
+              name: "White Scooter",
+              price: "$209",
+              img: "https://placehold.co/449x449",
+            },
+          ].map((scooter) => (
+            <div key={scooter.id} className="space-y-4">
+              <div className="relative">
+                <div className="w-[400px] h-[350px] bg-[#d9d9d9] rounded-tl-full shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]" />
+                <img
+                  src={scooter.img}
+                  alt={scooter.name}
+                  className="absolute w-full max-w-[300px] top-10 left-10"
+                />
+              </div>
+              <div className="space-y-2">
+                <p className="text-[#de7734] text-5xl font-semibold">
+                  {scooter.id}
+                </p>
+                <div className="flex justify-between">
+                  <p className="text-[#d3d3d3] text-2xl font-semibold">
+                    {scooter.name}
+                  </p>
+                  <p className="text-[#de7734] text-2xl font-semibold">
+                    {scooter.price}
+                  </p>
+                </div>
+                <button className="bg-[#de7734] text-white px-6 py-3 rounded-full uppercase text-sm font-medium border border-[#333333] hover:bg-[#c5682d] transition">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+        <img
+          src="https://placehold.co/3560x1868"
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover filter blur-sm"
+        />
+      </section>
+
+      {/* Testimonial Section */}
+      <section className="py-12">
+        <div className="container mx-auto px-4 text-center">
+          <div className="relative">
+            <p className="text-[#333333] text-xl max-w-3xl mx-auto leading-loose">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              augue eros, pellentesque nec tempor eu, sollicitudin at dolor.
+              Cras commodo venenatis diam, nec venenatis massa auctor at.
+            </p>
+            <p className="absolute top-0 left-0 text-[#333333] text-4xl">“</p>
+            <p className="absolute bottom-0 right-0 text-[#333333] text-4xl">
+              ”
+            </p>
+          </div>
+          <p className="text-[#de7734] text-3xl font-medium capitalize mt-4">
+            Quisque mattis
+          </p>
+        </div>
+      </section>
+
+      {/* Rental Service Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-[#333333] text-base">Rental Service</p>
+          <h2 className="text-[#405b6f] text-4xl font-semibold capitalize leading-tight mb-8">
+            Jump on and Enjoy the Ride
+          </h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              {
+                name: "Suspendisse",
+                price: "$20/ Hour",
+                img: "https://placehold.co/245x264",
+              },
+              {
+                name: "Morbi leo",
+                price: "$10/ Hour",
+                img: "https://placehold.co/338x338",
+              },
+              {
+                name: "Maximus",
+                price: "$20/ Hour",
+                img: "https://placehold.co/159x319",
+              },
+              {
+                name: "Fusce vel",
+                price: "$20/ Hour",
+                img: "https://placehold.co/630x420",
+              },
+            ].map((rental) => (
+              <div key={rental.name} className="relative">
+                <div className="w-[300px] h-[400px] bg-[#d9d9d9] rounded-tl-full shadow-[-10px_10px_20px_rgba(0,0,0,0.07)]" />
+                <img
+                  src={rental.img}
+                  alt={rental.name}
+                  className="absolute w-full max-w-[200px] top-10 left-10"
+                />
+                <div className="mt-4 space-y-2">
+                  <p className="text-[#405b6f] text-2xl font-semibold">
+                    {rental.name}
+                  </p>
+                  <p className="text-[#de7734] text-xl font-semibold">
+                    {rental.price}
+                  </p>
+                </div>
+                <div className="w-20 h-20 bg-[#de7734] rounded-full outline outline-[3px] outline-offset-[-1.5px] absolute bottom-0 left-1/2 transform -translate-x-1/2" />
+              </div>
+            ))}
+          </div>
+          <div className="flex justify-center gap-4 mt-8">
+            <div className="w-12 h-12 rounded-full border border-[#cecece]" />
+            <div className="w-4 h-4 bg-[#de7734] rounded-full border" />
+            <p className="text-[#405b6f] text-base font-semibold capitalize">
+              View More
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Subscribe Section */}
+      <section className="py-12 bg-[#de7734]">
+        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8">
+          <h2 className="text-white text-4xl font-semibold capitalize leading-tight">
+            Sign up for special offers and promotions
+          </h2>
+          <div className="space-y-4">
+            <p className="text-white text-xl uppercase">Subscribe</p>
+            <div className="flex items-center gap-2">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="w-full text-white bg-transparent border-b border-white outline-none py-2"
+              />
+              <div className="w-4 h-4 bg-white" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className={`bg-[#405b6f] text-white py-12 ${nunito.className}`}>
+        <div className="container mx-auto px-4 grid md:grid-cols-4 gap-8">
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-12 h-12 bg-[#de7734] rounded-full" />
+              <div className="w-32 h-16 bg-white" />
+            </div>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold capitalize mb-4">Menu</h3>
+            <div className="space-y-2 text-base">
+              <Link href="/">Home</Link>
+              <br />
+              <Link href="/about">About</Link>
+              <br />
+              <Link href="/products">Products</Link>
+              <br />
+              <Link href="/rental">Rental Service</Link>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold capitalize mb-4">Contact</h3>
+            <p className="text-base">
+              ModernRides@contact.com
+              <br />
+              +012-345-6789
+              <br />
+              9889 Lorem Ipsum street, Pellentesque, CA, USA
+            </p>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold capitalize mb-4">Social</h3>
+            <div className="flex gap-4">
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                <div className="w-4 h-4 bg-[#405b6f]" />
+              </div>
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                <div className="w-2 h-4 bg-[#405b6f]" />
+              </div>
+              <div className="w-12 h-12 bg-white rounded-full" />
+            </div>
+          </div>
+        </div>
+        <div className="container mx-auto px-4 mt-8 border-t border-white pt-4 flex justify-between text-base">
+          <p>Copyright Dotcreativemarket</p>
+          <div className="space-x-4">
+            <Link href="/terms">Terms of Use</Link>
+            <Link href="/privacy">Privacy Policy</Link>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
