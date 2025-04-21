@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Montserrat, Nunito } from "next/font/google";
 import Image from "next/image";
+import { CiLocationOn, CiWifiOn } from "react-icons/ci";
+import { RiShieldKeyholeLine } from "react-icons/ri";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -18,9 +20,15 @@ export default function LandingPage() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-transparent shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-[#de7734] rounded-full" />
-            <div className="w-20 h-10 bg-[#405b6f]" />
+          <div className="flex flex-col items-center gap-1">
+            <div className="flex items-center gap-1">
+              <span className="text-2xl font-bold text-[#405b6f]">M</span>
+              <div className="w-6 h-6 bg-[#de7734] rounded-full" />
+              <span className="text-2xl font-bold text-[#405b6f]">DERN</span>
+            </div>
+            <span className="text-2xl font-bold text-[#405b6f] self-start">
+              RIDES
+            </span>
           </div>
           <nav className="hidden md:flex gap-6 text-[#333333] text-base">
             <Link href="/">Home</Link>
@@ -80,47 +88,47 @@ export default function LandingPage() {
             alt="main scooter"
             className="absolute bottom-0 left-[40%]"
           />
-          <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center relative z-10">
-            <div className="space-y-6">
+          <div className="container mx-auto px-4 grid pt-20 md:grid-cols-2 gap-8 items-center relative z-10">
+            <div className="space-y-6 w-[80%]">
               <p className="text-[#333333] text-base">On Sale Now</p>
               <h1 className="text-[#405b6f] text-4xl md:text-6xl font-semibold uppercase">
                 Electric Scooter
               </h1>
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 bg-[#405b6f]" />
+                  <CiWifiOn />
                   <span className="text-[#333333] text-sm capitalize">
                     Wireless Bike
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-6 bg-[#212121] border border-[#405b6f]" />
+                  <RiShieldKeyholeLine />
                   <span className="text-[#333333] text-sm capitalize">
                     Smart Lock
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-5 h-5 bg-[#405b6f]" />
+                  <CiLocationOn />
                   <span className="text-[#333333] text-sm capitalize">
                     Location GPS
                   </span>
                 </div>
               </div>
-              <button className="bg-[#de7734] text-white px-6 py-3 rounded-full uppercase text-sm font-medium border border-[#333333] hover:bg-[#c5682d] transition">
-                Add to Cart
-              </button>
             </div>
-            <div className="relative">
-              <div className="absolute top-4 right-4 text-right">
+            <div className="ml-auto w-[50%]">
+              <div className="text-left">
                 <p className="text-[#de7734] text-3xl md:text-5xl font-semibold">
                   $1699.00
                 </p>
-                <p className="text-[#333333] text-sm mt-2">
+                <p className="text-[#333333] text-sm text-left w-[75%] max-xl:w-full  mt-2">
                   Lorem ipsum <span className="font-semibold">15% off</span>,
                   consectetur adipiscing elit.{" "}
                   <span className="font-semibold">Shipping</span> ullamcorper
                   convallis fermentum.
                 </p>
+                <button className="bg-[#de7734] text-white mt-2 px-6 py-3 rounded-full uppercase text-sm font-medium border  hover:bg-[#c5682d] transition">
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
