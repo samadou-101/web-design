@@ -135,12 +135,14 @@ export default function LandingPage() {
         </section>
 
         {/* About Section */}
-        <section className="py-12 relative bg-white z-10">
+        <section className="py-12 pt-26 relative bg-white z-10">
           <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
             <div className="relative">
-              <div className="w-64 h-64 bg-[#de7734] rounded-full absolute top-0 left-0 outline outline-[3px] outline-offset-[-1.5px]" />
-              <div className="w-32 h-32 rounded-full outline outline-[3px] outline-offset-[-1.5px] outline-[#de7734] absolute bottom-0 right-0" />
-              <div className="w-[600px] h-[500px] bg-[#d9d9d9] rounded-tl-full shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]" />
+              <div className="w-64 h-64 bg-[#de7734] rounded-full absolute -z-10 -top-12 -left-32  outline-offset-[-1.5px]" />
+              <div className="w-24 h-24 rounded-full outline-2 outline-offset-[-1.5px] outline-[#de7734] absolute -bottom-10 right-24" />
+              <div className="w-[600px] h-[500px] overflow-hidden bg-[#d9d9d9] relative z-20 rounded-tl-[30%] shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]">
+                <Image src={"/scooter-1.png"} fill alt="scooter 1" />
+              </div>
             </div>
             <div className="space-y-6">
               <p className="text-[#333333] text-base">About Us</p>
@@ -151,13 +153,13 @@ export default function LandingPage() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Vestibulum ullamcorper convallis fermentum.
               </p>
-              <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-full border border-[#cecece]" />
-                <div className="w-4 h-4 bg-[#de7734] rounded-full border" />
+              <div className="flex gap-4 relative w-fit items-center">
+                <p className="text-[#405b6f] text-base font-semibold capitalize">
+                  View More
+                </p>
+                <div className="w-12 h-12 rounded-full absolute border -right-8 border-[#cecece]" />
+                <div className="w-4 h-4 bg-[#de7734] rounded-full -right-8 absolute " />
               </div>
-              <p className="text-[#405b6f] text-base font-semibold capitalize">
-                View More
-              </p>
             </div>
           </div>
         </section>
