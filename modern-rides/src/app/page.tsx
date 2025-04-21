@@ -16,7 +16,7 @@ export default function LandingPage() {
       <div className="absolute inset-0 bg-[#d9d9d9] opacity-20 mix-blend-screen z-0" />
 
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-transparent shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 bg-[#de7734] rounded-full" />
@@ -59,7 +59,27 @@ export default function LandingPage() {
           priority
         />
         {/* Hero Section */}
-        <section className="relative pt-24 pb-80">
+        <section
+          className="relative border-2
+         pt-24 h-screen"
+        >
+          <Image
+            src="/hero-mask.png"
+            alt="main scooter"
+            width={0}
+            height={0}
+            className="absolute bottom-0 left-0 w-screen h-auto object-contain  lg:-bottom-[100px] xl:-bottom-[200px] 2xl:-bottom-[400px] object-bottom"
+            sizes="100vw"
+            priority
+          />
+
+          <Image
+            src={"/bigscooter.png"}
+            width={500}
+            height={500}
+            alt="main scooter"
+            className="absolute bottom-0 left-[40%]"
+          />
           <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center relative z-10">
             <div className="space-y-6">
               <p className="text-[#333333] text-base">On Sale Now</p>
@@ -91,11 +111,6 @@ export default function LandingPage() {
               </button>
             </div>
             <div className="relative">
-              <img
-                src="https://placehold.co/795x876"
-                alt="Electric Scooter"
-                className="w-full max-w-[500px] mx-auto"
-              />
               <div className="absolute top-4 right-4 text-right">
                 <p className="text-[#de7734] text-3xl md:text-5xl font-semibold">
                   $1699.00
@@ -118,11 +133,6 @@ export default function LandingPage() {
               <div className="w-64 h-64 bg-[#de7734] rounded-full absolute top-0 left-0 outline outline-[3px] outline-offset-[-1.5px]" />
               <div className="w-32 h-32 rounded-full outline outline-[3px] outline-offset-[-1.5px] outline-[#de7734] absolute bottom-0 right-0" />
               <div className="w-[600px] h-[500px] bg-[#d9d9d9] rounded-tl-full shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]" />
-              <img
-                src="https://placehold.co/1269x846"
-                alt="About"
-                className="absolute w-full max-w-[800px] top-0 left-[-100px]"
-              />
             </div>
             <div className="space-y-6">
               <p className="text-[#333333] text-base">About Us</p>
