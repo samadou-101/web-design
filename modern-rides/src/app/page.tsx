@@ -212,7 +212,7 @@ export default function LandingPage() {
         </section>
 
         {/* About Section */}
-        <section className="py-8 sm:py-12 relative bg-neutral-100 z-10">
+        <section className="py-8 sm:py-12  relative bg-neutral-100 z-10">
           <div className="container mx-auto px-4 grid xl:grid-cols-2 pt-22 gap-4 sm:gap-8 items-center">
             <div className="w-fit relative">
               <div className="w-24 sm:w-40 h-24 sm:h-40 bg-[#de7734] rounded-full absolute -z-10 -top-8 sm:-top-12 -left-10 sm:-left-20 circle-large" />
@@ -243,7 +243,7 @@ export default function LandingPage() {
 
         {/* Core Values Section */}
         <section className="py-8 sm:py-12 bg-neutral-100 relative max-sm:z-50 max-sm:mb-36 max-sm:pb-0 ">
-          <div className="container mx-auto px-4 flex flex-col-reverse xl:grid xl:grid-cols-2 gap-4 sm:gap-8 items-center">
+          <div className="container max-sm:pt-14 mx-auto px-4 flex flex-col-reverse xl:grid xl:grid-cols-2 gap-16 sm:gap-8 items-center">
             <div className="space-y-4 sm:space-y-6">
               <p className="text-[#333333] text-sm sm:text-base">
                 Our Core Value
@@ -305,8 +305,8 @@ export default function LandingPage() {
       </section>
 
       {/* Products Section */}
-      <section className="relative top-12 sm:-top-52 max-md:sm-10">
-        <div className="container mx-auto px-4 grid xl:grid-cols-2 gap-4 sm:gap-8 items-center">
+      <section className="relative top-12 sm:-top-52">
+        <div className="container mx-auto px-4 grid xl:grid-cols-2 gap-4 sm:gap-8 items-center max-sm:mb-32">
           <div className="relative">
             <div className="w-40 sm:w-64 h-40 sm:h-64 bg-[#de7734] rounded-full absolute z-10 -top-8 sm:-top-12 -left-16 sm:-left-32 circle-large" />
             <div className="w-16 sm:w-24 h-16 sm:h-24 rounded-full outline-2 outline-offset-[-1.5px] outline-[#de7734] absolute -bottom-6 sm:-bottom-10 right-12 sm:right-24 circle-small" />
