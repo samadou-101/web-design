@@ -15,9 +15,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Modern Rides",
   description: "Modern Rides Landing Page",
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({
