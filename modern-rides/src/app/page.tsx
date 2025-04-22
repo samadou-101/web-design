@@ -11,6 +11,7 @@ import { CgShoppingCart } from "react-icons/cg";
 import { BiSearch } from "react-icons/bi";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import ScooterImage from "@/components/ScooterImage";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -151,18 +152,19 @@ export default function LandingPage() {
             alt="main scooter"
             width={0}
             height={0}
-            className="absolute bottom-0 left-0 w-full h-auto object-contain hero-mask"
+            className="absolute bottom-0 left-0 lg:-bottom-[200px] xl:-bottom-[300px] 2xl:-bottom-[400px] 3xl:-bottom-[480px] w-full h-auto object-contain hero-mask"
             sizes="100vw"
             priority
           />
-          <Image
+          <ScooterImage />
+          {/* <Image
             src="/bigscooter.png"
-            width={300}
-            height={300}
+            width={440}
+            height={600}
             alt="main scooter"
-            className="absolute bottom-0 hero-scooter"
+            className="absolute bottom-0 left-1/2 transform -translate-x-1/2 hero-scooter"
             sizes="(max-width: 640px) 80vw, (max-width: 1024px) 60vw, 40vw"
-          />
+          /> */}
           <div className="container mx-auto px-4 pt-16 sm:pt-20 grid md:grid-cols-2 gap-4 sm:gap-8 items-center relative z-10">
             <div className="space-y-4 sm:space-y-6 w-full sm:w-[80%]">
               <p className="text-[#333333] text-sm sm:text-base">On Sale Now</p>
