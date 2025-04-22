@@ -242,7 +242,7 @@ export default function LandingPage() {
         </section>
 
         {/* Core Values Section */}
-        <section className="py-8 sm:py-12 bg-neutral-100 relative">
+        <section className="py-8 sm:py-12 bg-neutral-100 relative max-sm:z-50 max-sm:mb-36 max-sm:pb-0 ">
           <div className="container mx-auto px-4 flex flex-col-reverse xl:grid xl:grid-cols-2 gap-4 sm:gap-8 items-center">
             <div className="space-y-4 sm:space-y-6">
               <p className="text-[#333333] text-sm sm:text-base">
@@ -285,8 +285,8 @@ export default function LandingPage() {
       </div>
 
       {/* Round Big Circle */}
-      <section className="relative -top-16 sm:-top-24 w-screen h-[50vh] sm:h-[70vh] flex items-center justify-center">
-        <div className="w-[50vh] sm:w-[60vh] h-[50vh] sm:h-[60vh] rounded-full bg-white flex items-center justify-center relative">
+      <section className="relative -top-8 sm:-top-24 w-screen h-[30vh] sm:h-[70vh] flex items-center justify-center max-sm:h-[10vh]">
+        <div className="w-[60vh]  sm:w-[60vh] max-sm:w-[35vh] h-[50vh] sm:h-[60vh] max-sm:h-[35vh] rounded-full bg-white flex items-center justify-center relative">
           <div className="flex flex-col items-center gap-1">
             <div className="flex items-center gap-1">
               <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#405b6f]">
@@ -305,7 +305,7 @@ export default function LandingPage() {
       </section>
 
       {/* Products Section */}
-      <section className="relative -top-24 sm:-top-52">
+      <section className="relative top-12 sm:-top-52">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-4 sm:gap-8 items-center">
           <div className="relative">
             <div className="w-40 sm:w-64 h-40 sm:h-64 bg-[#de7734] rounded-full absolute z-10 -top-8 sm:-top-12 -left-16 sm:-left-32 circle-large" />
