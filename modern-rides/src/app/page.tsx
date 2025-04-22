@@ -63,7 +63,7 @@ export default function LandingPage() {
       `}</style>
 
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-[999] bg-transparent shadow-md">
+      <header className="fixed top-0 left-0 right-0 z-[999] bg-transparent backdrop-blur-lg shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex flex-col items-center gap-1">
             <div className="flex items-center gap-1">
