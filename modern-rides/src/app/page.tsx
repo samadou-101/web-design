@@ -305,8 +305,8 @@ export default function LandingPage() {
       </section>
 
       {/* Products Section */}
-      <section className="relative top-12 sm:-top-52">
-        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-4 sm:gap-8 items-center">
+      <section className="relative top-12 sm:-top-52 max-md:sm-10">
+        <div className="container mx-auto px-4 grid xl:grid-cols-2 gap-4 sm:gap-8 items-center">
           <div className="relative">
             <div className="w-40 sm:w-64 h-40 sm:h-64 bg-[#de7734] rounded-full absolute z-10 -top-8 sm:-top-12 -left-16 sm:-left-32 circle-large" />
             <div className="w-16 sm:w-24 h-16 sm:h-24 rounded-full outline-2 outline-offset-[-1.5px] outline-[#de7734] absolute -bottom-6 sm:-bottom-10 right-12 sm:right-24 circle-small" />
@@ -348,7 +348,7 @@ export default function LandingPage() {
           fill
           className="object-cover object-center"
         />
-        <div className="container mx-auto px-4 grid md:grid-cols-3 gap-4 sm:gap-8">
+        <div className="container mx-auto px-4 grid lg:grid-cols-3 gap-4 sm:gap-8">
           {[
             {
               id: "01",
@@ -371,33 +371,66 @@ export default function LandingPage() {
           ].map((scooter, index) => (
             <div
               key={scooter.id}
-              className="relative z-90 w-full sm:w-[80%] scooter-showcase-card mx-auto"
+              className="relative z-10 w-full sm:w-[80%] scooter-showcase-card mx-auto transform transition-all duration-300 hover:scale-105"
             >
-              <div className="bg-neutral-200 rounded-bl-[20%] sm:rounded-bl-[40%] shadow-lg w-full h-full flex flex-col items-center justify-center p-4 sm:p-6 relative">
-                <p className="absolute -top-[30%] sm:-top-[40%] left-4 sm:left-6 text-[#de7734] text-2xl sm:text-4xl font-bold">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl w-full h-full flex flex-col items-center justify-center p-4 sm:p-6 relative overflow-hidden border-t border-l border-white/20">
+                {/* Orange accent line at top */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#de7734] to-[#f5a06e]"></div>
+
+                {/* Show texts absolutely positioned on md+ */}
+                <p className="hidden md:block absolute top-4 left-4 text-[#de7734] text-4xl font-bold">
                   {scooter.id}
                 </p>
-                <p className="absolute -top-[15%] sm:-top-[20%] left-4 sm:left-6 text-[#D3D3D3]/80 text-lg sm:text-2xl font-semibold">
+                <p className="hidden md:block absolute top-6 left-16 text-gray-700 text-xl font-medium tracking-wide">
                   {scooter.name}
                 </p>
-                <p className="absolute -top-[15%] sm:-top-[20%] right-4 sm:right-6 text-[#de7734] text-base sm:text-xl font-bold">
+                <p className="hidden md:block absolute top-4 right-4 text-[#de7734] text-2xl font-bold">
                   {scooter.price}
                 </p>
-                <div className="w-[90%] h-[60%] sm:h-[70%] flex items-center justify-center">
+
+                {/* Show texts inline for small screens */}
+                <div className="block md:hidden text-center mb-4 space-y-1">
+                  <div className="flex items-center justify-between w-full px-2">
+                    <p className="text-[#de7734] text-2xl font-bold">
+                      {scooter.id}
+                    </p>
+                    <p className="text-[#de7734] text-xl font-bold">
+                      {scooter.price}
+                    </p>
+                  </div>
+                  <p className="text-gray-700 text-lg font-medium tracking-wide">
+                    {scooter.name}
+                  </p>
+                </div>
+
+                <div className="w-[90%] h-[60%] sm:h-[70%] flex items-center justify-center py-6">
                   <Image
                     src={scooter.img}
-                    width={150}
-                    height={150}
+                    width={180}
+                    height={180}
                     alt={scooter.name}
-                    className="w-auto max-w-full h-auto mb-2 sm:mb-4"
+                    className="w-auto max-w-full h-auto mb-2 sm:mb-4 drop-shadow-lg"
                   />
                 </div>
-                {(index === 0 || index === 2) && (
-                  <div className="absolute -bottom-3 sm:-bottom-5 left-0 w-12 sm:w-22 h-12 sm:h-22 -z-10 bg-[#de7734] rounded-full"></div>
+
+                {/* Action button */}
+                <button className="mt-2 bg-[#de7734] hover:bg-[#c26629] text-white font-medium py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                  View Details
+                </button>
+
+                {/* Decorative elements */}
+                {index === 0 && (
+                  <div className="absolute -bottom-4 -left-4 w-16 h-16 -z-10 bg-[#de7734]/80 rounded-full blur-sm"></div>
                 )}
                 {index === 1 && (
-                  <div className="absolute -top-4 sm:-top-6 -left-4 sm:-left-6 w-12 sm:w-18 h-12 sm:h-18 -z-10 bg-transparent outline-2 outline-[#de7734] rounded-full"></div>
+                  <div className="absolute -top-6 -right-6 w-20 h-20 -z-10 bg-[#de7734]/20 rounded-full"></div>
                 )}
+                {index === 2 && (
+                  <div className="absolute top-1/2 -right-8 w-16 h-16 -z-10 bg-[#de7734]/50 rounded-full blur-sm"></div>
+                )}
+
+                {/* Subtle pattern overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-30 mix-blend-overlay"></div>
               </div>
             </div>
           ))}
