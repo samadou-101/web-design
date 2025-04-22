@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const ScooterImage = () => {
   return (
-    <div className="absolute bottom-0 pb-4 left-1/2 transform -translate-x-1/2">
+    <div className="absolute bottom-0 border-2 pb-4 left-1/2 transform -translate-x-1/2">
       {/* Scooter image in front */}
       <Image
         src="/bigscooter.png"
@@ -19,21 +19,21 @@ const ScooterImage = () => {
         alt="left shadow"
         width={100}
         height={50}
-        className="absolute bottom-2 left-0 z-10"
+        className="absolute bottom-2 left-0 z-10 max-sm:-left-4 max-sm:bottom-2 max-sm:w-[80px]"
       />
       <Image
         src="/middle-shadow.png"
         alt="middle shadow"
         width={50}
         height={30}
-        className="absolute bottom-0 left-[55%] z-10"
+        className="absolute hidden sm:block bottom-0 left-[55%] z-10 "
       />
       <Image
         src="/right-shadow.png"
         alt="right shadow"
         width={100}
         height={50}
-        className="absolute bottom-0 right-1 z-10"
+        className="absolute bottom-0 right-1 z-10 max-sm:-right-3 max-sm:bottom-1 max-sm:w-[70px]"
       />
     </div>
   );

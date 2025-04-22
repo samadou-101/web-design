@@ -5,7 +5,12 @@ import { Montserrat, Nunito } from "next/font/google";
 import Image from "next/image";
 import { CiLocationOn, CiWifiOn } from "react-icons/ci";
 import { RiShieldKeyholeLine } from "react-icons/ri";
-import { BsArrowRight, BsInstagram, BsTwitterX } from "react-icons/bs";
+import {
+  BsArrowRight,
+  BsGithub,
+  BsInstagram,
+  BsTwitterX,
+} from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { CgShoppingCart } from "react-icons/cg";
 import { BiSearch } from "react-icons/bi";
@@ -242,8 +247,8 @@ export default function LandingPage() {
         </section>
 
         {/* Core Values Section */}
-        <section className="py-8 sm:py-12 bg-neutral-100 relative max-sm:z-50 max-sm:mb-36 max-sm:pb-0 ">
-          <div className="container max-sm:pt-14 mx-auto px-4 flex flex-col-reverse xl:grid xl:grid-cols-2 gap-16 sm:gap-8 items-center">
+        <section className="py-8 sm:py-12 bg-neutral-100  border-b-[1px] border-neutral-100 relative max-sm:z-50 max-sm:mb-36">
+          <div className="container max-sm:pt-14 mx-auto px-4  flex flex-col-reverse xl:grid xl:grid-cols-2 gap-16 sm:gap-8 items-center">
             <div className="space-y-4 sm:space-y-6">
               <p className="text-[#333333] text-sm sm:text-base">
                 Our Core Value
@@ -638,7 +643,16 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="container mx-auto px-4 mt-8 border-t border-white pt-4 flex flex-col sm:flex-row justify-between text-sm sm:text-base gap-4">
-          <p>Copyright Dotcreativemarket</p>
+          <p className="flex ">
+            {new Date().getFullYear()} Developed By
+            <a
+              href="https://github.com/samadou-101/web-design/tree/main/modern-rides"
+              className="underline flex ml-1 items-center gap-2"
+            >
+              Abdessamad Saihi
+              <BsGithub />
+            </a>
+          </p>
           <div className="space-x-4">
             <Link
               href="/terms"
