@@ -213,10 +213,10 @@ export default function LandingPage() {
 
         {/* About Section */}
         <section className="py-8 sm:py-12 relative bg-neutral-100 z-10">
-          <div className="container mx-auto px-4 grid md:grid-cols-2 gap-4 sm:gap-8 items-center">
-            <div className="relative">
-              <div className="w-40 sm:w-64 h-40 sm:h-64 bg-[#de7734] rounded-full absolute -z-10 -top-8 sm:-top-12 -left-16 sm:-left-32 circle-large" />
-              <div className="w-16 sm:w-24 h-16 sm:h-24 rounded-full outline-2 outline-offset-[-1.5px] outline-[#de7734] absolute -bottom-6 sm:-bottom-10 right-12 sm:right-24 circle-small" />
+          <div className="container mx-auto px-4 grid xl:grid-cols-2 pt-22 gap-4 sm:gap-8 items-center">
+            <div className="w-fit relative">
+              <div className="w-24 sm:w-40 h-24 sm:h-40 bg-[#de7734] rounded-full absolute -z-10 -top-8 sm:-top-12 -left-10 sm:-left-20 circle-large" />
+              <div className="w-16 sm:w-24 h-16 sm:h-24 rounded-full outline-2 outline-offset-1 outline-[#de7734] absolute -bottom-10 -right-10 z-10 circle-small" />
               <div className="w-[80vw] sm:w-[600px] h-[60vw] sm:h-[500px] overflow-hidden bg-[#d9d9d9] relative z-20 rounded-tl-[20%] sm:rounded-tl-[30%] shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]">
                 <Image src="/scooter-1.png" fill alt="scooter 1" />
               </div>
@@ -243,7 +243,7 @@ export default function LandingPage() {
 
         {/* Core Values Section */}
         <section className="py-8 sm:py-12 bg-neutral-100 relative">
-          <div className="container mx-auto px-4 grid md:grid-cols-2 gap-4 sm:gap-8 items-center">
+          <div className="container mx-auto px-4 flex flex-col-reverse xl:grid xl:grid-cols-2 gap-4 sm:gap-8 items-center">
             <div className="space-y-4 sm:space-y-6">
               <p className="text-[#333333] text-sm sm:text-base">
                 Our Core Value
@@ -273,9 +273,10 @@ export default function LandingPage() {
                 <div className="w-3 sm:w-4 h-3 sm:h-4 bg-[#de7734] rounded-full -right-6 sm:-right-8 absolute" />
               </div>
             </div>
-            <div className="relative ml-auto">
-              <div className="w-40 sm:w-64 h-40 sm:h-64 bg-[#de7734] rounded-full absolute -z-10 -top-8 sm:-top-12 -right-16 sm:-right-32 circle-large" />
-              <div className="w-[80vw] sm:w-[600px] h-[60vw] sm:h-[500px] overflow-hidden bg-[#d9d9d9] relative rounded-tr-[20%] sm:Rounded-tr-[30%] shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]">
+            <div className="relative w-fit ml-auto">
+              <div className="w-24 sm:w-40 h-24 sm:h-40 bg-[#de7734] rounded-full absolute z-10 -top-8 sm:-top-12 -right-10 circle-large" />
+              <div className="w-16 sm:w-24 h-16 sm:h-24 rounded-full outline-2 outline-offset-1 outline-[#de7734] absolute -bottom-10 -left-10 z-10 circle-small" />
+              <div className="w-[80vw] sm:w-[600px] h-[60vw] sm:h-[500px] overflow-hidden z-30 bg-[#d9d9d9] relative rounded-tr-[20%] sm:Rounded-tr-[30%] shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]">
                 <Image src="/scooter-3.jpg" fill alt="scooter 1" />
               </div>
             </div>
@@ -286,7 +287,6 @@ export default function LandingPage() {
       {/* Round Big Circle */}
       <section className="relative -top-16 sm:-top-24 w-screen h-[50vh] sm:h-[70vh] flex items-center justify-center">
         <div className="w-[50vh] sm:w-[60vh] h-[50vh] sm:h-[60vh] rounded-full bg-white flex items-center justify-center relative">
-          <div className="w-16 sm:w-24 h-16 sm:h-24 rounded-full outline-2 outline-offset-[-1.5px] outline-[#de7734] absolute top-0 right-6 sm:right-10 circle-small" />
           <div className="flex flex-col items-center gap-1">
             <div className="flex items-center gap-1">
               <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#405b6f]">
