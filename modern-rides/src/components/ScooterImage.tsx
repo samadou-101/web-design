@@ -1,8 +1,9 @@
+"use client";
 import Image from "next/image";
 
 const ScooterImage = () => {
   return (
-    <div className="absolute bottom-0 border-2 pb-4 left-1/2 transform -translate-x-1/2">
+    <div className="absolute bottom-0  pb-4 left-1/2 transform -translate-x-1/2">
       {/* Scooter image in front */}
       <Image
         src="/bigscooter.png"
