@@ -455,51 +455,86 @@ export default function LandingPage() {
       </section>
 
       {/* Rental Service Section */}
-      <section className="py-8 mt-12 sm:mt-16 flex min-h-screen gap-4 flex-col items-center">
-        <span className="text-sm sm:text-base">Rental Service</span>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#405B6F]">
-          Jump On And Enjoy The Ride
-        </h1>
-        <div className="grid mt-4 md:grid-cols-4 gap-4 sm:gap-8 z-90">
-          {[
-            { name: "Suspendisse", price: "$20/Hour", img: "/ride-1.png" },
-            { name: "Morbi leo", price: "$10/Hour", img: "/ride-2.png" },
-            { name: "Maximus", price: "$20/Hour", img: "/ride-3.png" },
-            { name: "Fusce vel", price: "$20/Hour", img: "/ride-4.png" },
-          ].map((scooter, index) => (
-            <div
-              key={index}
-              className="relative w-full sm:w-[90%] z-20 rental-card mx-auto"
-            >
-              <div className="bg-white rounded-bl-[20%] sm:rounded-bl-[40%] shadow-lg flex flex-col items-center p-3 sm:p-4">
-                <div className="relative p-6 sm:p-8 w-[200px] sm:w-[300px] h-[200px] sm:h-[300px] flex items-center justify-center">
-                  <Image
-                    src={scooter.img}
-                    alt={scooter.name}
-                    width={150}
-                    height={150}
-                    className="w-full h-auto"
-                  />
-                  <div className="absolute -bottom-0 -z-10 -left-3 sm:-left-4 w-12 sm:w-16 h-12 sm:h-16 bg-[#de7734] rounded-full"></div>
+      <section className="py-12 mt-12 sm:mt-16 flex min-h-screen gap-4 flex-col items-center">
+        <div className="container mx-auto px-4">
+          {/* Section header */}
+          <div className="text-center mb-12">
+            <span className="text-sm sm:text-base inline-block px-4 py-1 bg-[#de7734]/10 text-[#de7734] font-medium rounded-full mb-3">
+              Rental Service
+            </span>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#405B6F]">
+              Jump On And Enjoy The Ride
+            </h1>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#de7734] to-[#f5a06e] mx-auto mt-4"></div>
+          </div>
+
+          {/* Rental cards grid */}
+          <div className="grid mt-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 z-10">
+            {[
+              { name: "Suspendisse", price: "$20/Hour", img: "/ride-1.png" },
+              { name: "Morbi leo", price: "$10/Hour", img: "/ride-2.png" },
+              { name: "Maximus", price: "$20/Hour", img: "/ride-3.png" },
+              { name: "Fusce vel", price: "$20/Hour", img: "/ride-4.png" },
+            ].map((scooter, index) => (
+              <div
+                key={index}
+                className="relative group w-full z-20 rental-card mx-auto transform transition-all duration-300 hover:translate-y-[-8px]"
+              >
+                <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl flex flex-col items-center p-5 pb-12 relative overflow-hidden">
+                  {/* Top accent gradient */}
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#de7734] to-[#f5a06e]"></div>
+
+                  {/* Image container */}
+                  <div className="relative p-4 w-full aspect-square flex items-center justify-center">
+                    <div className="absolute inset-0 bg-[#f8f8f8] rounded-xl"></div>
+                    <Image
+                      src={scooter.img}
+                      alt={scooter.name}
+                      width={180}
+                      height={180}
+                      className="w-full h-auto max-h-48 object-contain z-10 transform transition-all duration-500 group-hover:scale-110"
+                    />
+
+                    {/* Decorative elements */}
+                    <div className="absolute -bottom-2 -left-2 w-14 h-14 bg-[#de7734] rounded-full opacity-80"></div>
+                    {index % 2 === 0 && (
+                      <div className="absolute top-4 right-4 w-8 h-8 border-2 border-[#de7734]/30 rounded-full"></div>
+                    )}
+                    {index % 2 === 1 && (
+                      <div className="absolute -top-2 -right-2 w-10 h-10 bg-[#405B6F]/10 rounded-full"></div>
+                    )}
+                  </div>
+
+                  {/* Product info */}
+                  <div className="w-full mt-4 text-center">
+                    <p className="text-xl md:text-2xl text-[#405B6F] font-semibold tracking-wide">
+                      {scooter.name}
+                    </p>
+                    <p className="text-[#de7734] font-bold text-base md:text-lg mt-1">
+                      {scooter.price}
+                    </p>
+
+                    {/* Hidden rent button that appears on hover */}
+                    <button className="mt-4 bg-[#405B6F] hover:bg-[#344a5c] text-white text-sm py-2 px-5 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                      Rent Now
+                    </button>
+                  </div>
+
+                  {/* Bottom decorative pattern */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-[#de7734]/20 to-transparent"></div>
                 </div>
               </div>
-              <div className="flex top-[100%] sm:top-[107%] gap-2 sm:gap-4 text-center left-10 sm:left-20 flex-col absolute">
-                <p className="text-lg sm:text-xl md:text-2xl text-[#405B6F] font-semibold">
-                  {scooter.name}
-                </p>
-                <p className="top-[110%] sm:top-[118%] text-[#de7734] font-bold text-sm sm:text-base">
-                  {scooter.price}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="flex gap-4 relative mt-auto pb-24 sm:pb-36 w-fit items-center">
-          <p className="text-[#405b6f] text-sm sm:text-base font-semibold capitalize">
-            View More
-          </p>
-          <div className="w-8 sm:w-12 h-8 sm:h-12 rounded-full absolute border -right-6 sm:-right-8 border-[#cecece]" />
-          <div className="w-3 sm:w-4 h-3 sm:h-4 bg-[#de7734] rounded-full -right-6 sm:-right-8 absolute" />
+            ))}
+          </div>
+
+          {/* View more button */}
+          <div className="flex justify-center mt-16 mb-8">
+            <button className="group px-1 relative flex items-center text-lg gap-3 py-3 text-[#405b6f] font-semibold rounded-full hover:bg-[#405b6f] hover:text-white transition-all duration-300">
+              View More
+              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-full absolute border -right-5 sm:-right-8 border-[#cecece]" />
+              <div className="w-3 sm:w-4 h-3 sm:h-4 bg-[#de7734] rounded-full -right-5 sm:-right-8 absolute" />
+            </button>
+          </div>
         </div>
       </section>
 
