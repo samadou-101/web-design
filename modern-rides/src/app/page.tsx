@@ -586,7 +586,7 @@ export default function LandingPage() {
             <h3 className="text-xl sm:text-2xl font-bold capitalize mb-4">
               Menu
             </h3>
-            <div className="space-y-2 text-sm sm:text-base">
+            <div className="space-y-2 text-xs text-white/90 sm:text-base">
               <Link
                 href="/"
                 className="block hover:text-[#de7734] transition-colors"
@@ -617,7 +617,7 @@ export default function LandingPage() {
             <h3 className="text-xl sm:text-2xl font-bold capitalize mb-4">
               Contact
             </h3>
-            <p className="text-sm sm:text-base">
+            <p className="text-xs sm:text-bas text-white/90">
               ModernRides@contact.com
               <br />
               +012-345-6789
@@ -630,13 +630,13 @@ export default function LandingPage() {
               Social
             </h3>
             <div className="flex gap-4">
-              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-white rounded-full flex items-center justify-center">
+              <div className="w-8 sm:w-12 h-8 sm:h-12 bg-white rounded-full flex items-center justify-center">
                 <BsInstagram color="#405b6f" className="text-lg sm:text-xl" />
               </div>
-              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-white rounded-full flex items-center justify-center">
+              <div className="w-8 sm:w-12 h-8 sm:h-12 bg-white rounded-full flex items-center justify-center">
                 <BsTwitterX color="#405b6f" className="text-lg sm:text-xl" />
               </div>
-              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-white rounded-full flex items-center justify-center">
+              <div className="w-8 sm:w-12 h-8 sm:h-12 bg-white rounded-full flex items-center justify-center">
                 <FaFacebookF color="#405b6f" className="text-lg sm:text-xl" />
               </div>
             </div>
@@ -653,20 +653,6 @@ export default function LandingPage() {
               <BsGithub />
             </a>
           </p>
-          <div className="space-x-4">
-            <Link
-              href="/terms"
-              className="hover:text-[#de7734] transition-colors"
-            >
-              Terms of Use
-            </Link>
-            <Link
-              href="/privacy"
-              className="hover:text-[#de7734] transition-colors"
-            >
-              Privacy Policy
-            </Link>
-          </div>
         </div>
       </footer>
     </div>
